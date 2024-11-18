@@ -5,7 +5,6 @@
 
 # Imports
 # -------
-
 import textwrap
 
 class Tetrahydrofuran(object):
@@ -93,7 +92,7 @@ class Tetrahydrofuran(object):
     def get_monomer_b_hydrogen_zmatrix(self):
 
         zmatrix = '''\
-            H21   :1    DISTANCE    :2 180.0000       :3 180.0000
+            H21   :1    DISTANCE    :2 ANGLE       :3 DIHEDRAL
             X21   H21   1.0000      :1  90.0000       :2    0.0000
             C21  H21  1.1052       X21  90.0000       :2  180.0000
             O21  C21  1.4476  H21  112.6033           :1  180.0000
@@ -119,9 +118,9 @@ class Tetrahydrofuran(object):
     def get_monomer_b_oxygen_zmatrix(self):
 
         zmatrix = '''\
-            O21  :1  DISTANCE  X11   90.0000    :2  180.0000
-            C21  O21  1.4476   :1  126.9550  X11   0.00000
-            C22  C21  1.5321   :1  126.9550  X11  180.0000
+            O21  :1  DISTANCE  :2   ANGLE    :3  DIHEDRAL
+            C21  O21  1.4476   :1  126.9550  :2   0.00000
+            C22  C21  1.5321   :1  126.9550  :2  180.0000
             C23  C22  1.5376  C21  101.1722  O21   33.0711
             H21  C23  1.1020  C22  110.1183  C21   77.3973
             H22  C23  1.1001  C22  113.6317  C21 -160.2817
@@ -140,3 +139,4 @@ class Tetrahydrofuran(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
