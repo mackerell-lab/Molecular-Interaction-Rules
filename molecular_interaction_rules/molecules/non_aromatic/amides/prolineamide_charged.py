@@ -10,6 +10,42 @@ import textwrap
 
 class ProlineamideCharged(object):
 
+  '''
+
+  RESI PNH2          1.00 ! C5H11N2O, prolineamide (aka TP2, PAMD), R. Dunbrack
+  ! charges adjusted for consistency with CGenFF charges
+  ATOM N    NG3P2   -0.22
+  ATOM HN1  HGP2     0.34
+  ATOM HN2  HGP2     0.34
+  ATOM CD   CG3C54  -0.35
+  ATOM CB   CG3C52  -0.12 !    HN1   HD1 HD2
+  ATOM CG   CG3C52  -0.12 !      \    \ /
+  ATOM CA   CG3C53   0.12 !  HN2--N---CD   HG1
+  ATOM C    CG2O1    0.51 !       |(+)  \  /
+  ATOM O    OG2D1   -0.51 !       |      CG
+  ATOM HA   HGA1     0.09 !       |     / \
+  ATOM HB1  HGA2     0.09 !    HA-CA--CB   HG2
+  ATOM HB2  HGA2     0.09 !       |   / \
+  ATOM HG1  HGA2     0.09 !       | HB1 HB2
+  ATOM HG2  HGA2     0.09 !     O=C
+  ATOM HD1  HGA2     0.28 !       |
+  ATOM HD2  HGA2     0.28 !       NT
+  ATOM NT   NG2S2   -0.62 !      / \
+  ATOM HT1  HGP1     0.31 !   HT1   HT2
+  ATOM HT2  HGP1     0.31
+
+  Rule 3
+
+  '''
+
+  __CGENFF_ATOM_TYPES__ = {
+    'H1': ['HGA1', 'CG3C53'],
+    # 'H2': ['HGA2', 'CG3C54']
+  }
+
+  __DGENFF_ATOM_TYPES__ = {
+  }
+
   def __init__(self):
 
     self.resi_name = 'PNH2'
@@ -105,3 +141,4 @@ class ProlineamideCharged(object):
     ]
 
     return textwrap.dedent(zmatrix), atom_name
+
