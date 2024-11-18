@@ -50,7 +50,7 @@ class Cyclopropane(object):
     def get_monomer_b_hydrogen_zmatrix(self):
 
         zmatrix = '''\
-            H21  :1 DISTANCE  :2 90.0000 :3  90.0000
+            H21  :1 DISTANCE  :2 ANGLE :3  DIHEDRAL
             X21 H21 1.0000  :1  90.0000   :2   0.0000
             C21 H21 1.1064 X21  90.0000   :1  180.0000
             C22 C21 1.5369 H21 110.3361   :1  180.0000
@@ -68,3 +68,4 @@ class Cyclopropane(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
