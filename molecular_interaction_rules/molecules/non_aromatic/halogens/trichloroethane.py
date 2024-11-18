@@ -60,7 +60,7 @@ class Trichloroethane(object):
   def get_monomer_b_chloro_zmatrix(self):
 
       zmatrix = '''\
-          CL21  :1 DISTANCE :2  90.0000   :3  90.0000
+          CL21  :1 DISTANCE :2  ANGLE   :3  DIHEDRAL
           X21 CL21 1.0000   :1  90.0000   :2   0.0000
           C22 CL21 1.7853  X21  90.0000   :1  180.0000
           C21 C22  1.5227 CL21 109.7299   :1  180.0000
@@ -77,3 +77,4 @@ class Trichloroethane(object):
       ]
 
       return textwrap.dedent(zmatrix), atom_name
+
