@@ -88,7 +88,7 @@ class Dimethylformamide(object):
 
         monomer_b_species = {
             'H1': self.get_monomer_b_hydrogen_zmatrix(),
-            'N1': self.get_monomer_b_nitrogen_zmatrix()
+            # 'N1': self.get_monomer_b_nitrogen_zmatrix()
         }
 
         return monomer_b_species
@@ -96,8 +96,8 @@ class Dimethylformamide(object):
     def get_monomer_b_nitrogen_zmatrix(self):
 
         zmatrix = '''\
-          N21   :1  DISTANCE   :2  180.0000     :3   90.0000
-          C22   N21   1.3795   :1  180.0000     :2   180.0000
+          N21   :1  DISTANCE   :2  ANGLE        :3   90.00000
+          C22   N21   1.3795   :1  180.0000     :2   DIHEDRAL
           H21   C22   1.1026   N21   126.0143   :1     0.0000
           C21   N21   1.4499   C22  120.2747    H21  178.1853
           O21   C22   1.2241   N21  126.0143    C21   -2.4121
@@ -121,7 +121,7 @@ class Dimethylformamide(object):
     def get_monomer_b_hydrogen_zmatrix(self):
 
         zmatrix = '''\
-            H21    :1   DISTANCE   :2  90.0000     :3   90.0000
+            H21    :1   DISTANCE   :2  ANGLE       :3   DIHEDRAL
             X21  H21    1.0000     :1  90.0000     :2    0.0000
             C22   H21   1.1026   X21  90.0000      :2  180.0000
             N21   C22   1.3795   H21  126.0143     :1  180.0000
@@ -142,3 +142,4 @@ class Dimethylformamide(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
