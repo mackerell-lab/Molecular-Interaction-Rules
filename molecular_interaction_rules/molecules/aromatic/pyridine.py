@@ -22,7 +22,6 @@ class Pyridine(object):
         '''
 
         monomer_a_species = {
-            'N1': self.monomer_a_nitrogen_zmatrix(),
             'RC1': self.monomer_a_aromatic_zmatrix()
         }
 
@@ -32,7 +31,6 @@ class Pyridine(object):
 
         monomer_b_species = {
           'RC1': self.get_monomer_b_aromatic_zmatrix(),
-          'N1': self.monomer_b_nitrogen_zmatrix()
         }
 
         return monomer_b_species
@@ -90,10 +88,10 @@ class Pyridine(object):
     def get_monomer_b_aromatic_zmatrix(self):
 
         zmatrix = '''\
-            X21   :1  DISTANCE  :2  180.0000  :3   90.0000
+            X21   :1  DISTANCE  :2  ANGLE  :3   90.00000
             C21  X21  1.3940  :1  90.0000   :2  180.0000
             C22  C21  1.4045 X21   60.0000   :1  90.0000
-            C23  C22  1.4045 C21  120.0000 X21    0.0000
+            C23  C22  1.4045 C21  120.0000 X21   DIHEDRAL
             N21  C23  1.3208 C22  124.0000 C21    0.0000
             C24  N21  1.3208 C23  116.0000 C22    0.0000
             C25  C24  1.4045 N21  120.0000 C23    0.0000
@@ -112,27 +110,5 @@ class Pyridine(object):
 
         return textwrap.dedent(zmatrix), atom_name
 
-    def monomer_b_nitrogen_zmatrix(self):
 
-      zmatrix = '''\
-           N21   :1   DISTANCE   :2  180.0000   X11    -0.0000
-           C21  N21  1.3208      :1  236.0000    X11     0.0000
-           C22  C21  1.4045  N21  -124.0000      :1    0.0000
-           C23  C22  1.4045  C21  120.0000  N21   0.0000
-           C24  C23  1.4045  C22  120.0000  C21   0.0000
-           C25  N21  1.3208  C21  116.0000  C22   0.0000
-           H21  C21  1.0756  C22  120.0000  C23 180.0000
-           H22  C22  1.0756  C23  120.0000  C24 180.0000
-           H23  C23  1.0756  C24  120.0000  C25 180.0000
-           H24  C24  1.0756  C25  120.0000  N21 180.0000
-           H25  C25  1.0756  N21  120.0000  C21 180.0000
-           X21  N21  1.0000  C21   90.0000  C22 180.0000
-           0 1
-        '''
 
-      atom_name = [
-        'CG', 'CE1', 'CD1', 'NZ', 'CE2', 'CD2',
-        'HG', 'HE1', 'HD1', 'HD2', 'HE2',
-      ]
-
-      return textwrap.dedent(zmatrix), atom_name
