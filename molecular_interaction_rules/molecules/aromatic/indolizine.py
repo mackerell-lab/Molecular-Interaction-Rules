@@ -63,9 +63,9 @@ class Indolizine(object):
     def monomer_b_aromatic_zmatrix(self):
 
         zmatrix = '''\
-            X21   :1  DISTANCE  :2   180.0000  :3   90.0000
-            N21  X21 1.1940     :1   90.0000   :2  180.0000
-            C21  N21  1.3828  X21   60.0000    :1   90.0000
+            X21   :1  DISTANCE  :2   ANGLE     :3   90.0000
+            N21  X21 1.1940     :1   90.0000   :2    0.0000
+            C21  N21  1.3828  X21   60.0000    :1   DIHEDRAL
             C22  C21  1.3803  N21  119.7565   X21    0.0000
             C23  C22  1.4302  C21  120.6364   N21    0.0000
             C24  C23  1.3904  C22  119.4765   C21   -0.0000
@@ -128,3 +128,4 @@ class Indolizine(object):
         ],
 
         return textwrap.dedent(zmatrix), atom_name
+
