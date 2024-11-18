@@ -95,7 +95,7 @@ class Neopentane(object):
     def get_monomer_b_substituent_carbon(self):
 
         zmatrix = '''\
-              H21  :1  DISTANCE  :2 90.0000 :3 90.0000
+              H21  :1  DISTANCE  :2 ANGLE :3 DIHEDRAL
               X21 H21 1.0000  :1  90.0000  :2    0.0000
               C21 H21 1.1013 X21  90.0000  :2  180.0000
               C22 C21 1.5345 H21 111.6112  :1  180.0000
@@ -121,3 +121,5 @@ class Neopentane(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
+
