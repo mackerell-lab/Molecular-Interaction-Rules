@@ -77,7 +77,7 @@ class Difluoroethane(object):
     def get_monomer_b_fluoro_zmatrix(self):
 
         zmatrix = '''\
-            F21   :1 DISTANCE    :2 90.0000      :3  90.0000
+            F21   :1 DISTANCE    :2  ANGLE      :3  DIHEDRAL
             X21   F21 1.0000      :1  90.0000     :2   0.0000
             C21   F21   1.3863   X21  90.0000    :1  180.0000
             C22   C21   1.5054   F21  110.1466   :1  180.0000
@@ -98,7 +98,7 @@ class Difluoroethane(object):
     def get_monomer_b_hydrogen_zmatrix(self):
 
         zmatrix = '''\
-                H21   :1  DISTANCE    :2  90.0000   :3  90.0000
+                H21   :1  DISTANCE    :2  ANGLE   :3  DIHEDRAL
                 X21  H21  1.0000      :1  90.0000   :2   0.0000
                 C21  H21  1.0996  X21  90.0000      :1  180.0000
                 C22  C21  1.5054  H21  109.4854     :1  180.0000
@@ -115,3 +115,4 @@ class Difluoroethane(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
