@@ -55,7 +55,7 @@ class Amidinium(object):
         '''
 
         monomer_b_species = {
-          'H1': self.get_monomer_a_nitrogen_zmatrix(),
+          'H1': self.get_monomer_b_nitrogen_zmatrix(),
         }
 
         return monomer_b_species
@@ -63,18 +63,18 @@ class Amidinium(object):
   def get_monomer_b_nitrogen_zmatrix(self):
 
         zmatrix = '''\
-                H26  :1   DISTANCE  :2 90.0000      :3  180.0000
-                X21  H21  1.0000    :1  90.0000     :2    0.0000
+                H26  :1   DISTANCE  :2  ANGLE      :3  DIHEDRAL
+                X21  H26  1.0000    :1  90.0000     :2    0.0000
                 N21  H26  1.0158   X21  90.0000     :2  180.0000
                 C21  N21  1.3802   H26  113.5777    :1  180.0000
                 N22  C21  1.2582   N21  119.7147  H26   13.7994
                 H21  N22  1.0019   C21  111.4728  N21  175.6979
                 H22  N22  1.0019   C21  111.4728  N21   60.0000
                 C22  C21  1.5109   N22  126.4061  H21   -1.4460
-                H22  C22  1.0847   C21  110.6754  N21  -57.1481
-                H23  C22  1.0863   C21  110.6754  N21   61.7100
-                H24  C22  1.0818   C21  110.6754  N21 -177.9849
-                H25  N21  0.9961   C21  116.9658  N22  149.2893
+                H23  C22  1.0847   C21  110.6754  N21  -57.1481
+                H24  C22  1.0863   C21  110.6754  N21   61.7100
+                H25  C22  1.0818   C21  110.6754  N21 -177.9849
+                H27  N21  0.9961   C21  116.9658  N22  149.2893
                 1 1
             '''
 
@@ -83,3 +83,4 @@ class Amidinium(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
