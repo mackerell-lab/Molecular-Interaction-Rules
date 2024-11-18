@@ -7,6 +7,7 @@
 # -------
 import textwrap
 
+
 class IodoBenzene(object):
 
     def __init__(self):
@@ -90,9 +91,10 @@ class IodoBenzene(object):
     def monomer_b_halogen_zmatrix(self):
 
       zmatrix = '''\
-            I21  :1  DISTANCE   :2  180.0000    :3    90.0000
-            C21  I21  2.2114    :1  180.0000    :2   180.0000
-            C22  C21  1.3986   I21  120.0000    :1     0.0000
+            I21  :1  DISTANCE   :2   ANGLE     :3   90.0000
+            X21  I21  1.0000    :1  90.0000    :2    0.0000
+            C21  I21  2.2114    X21  90.0000   :1   DIHEDRAL
+            C22  C21  1.3986   I21  120.0000   :1     0.0000
             C23  C22  1.3774   C21  120.0000   I21  -180.0000
             C24  C23  1.3774   C22  120.0000   C21     0.0000
             C25  C24  1.3774   C23  120.0000   C22     0.0000
@@ -114,10 +116,10 @@ class IodoBenzene(object):
     def monomer_b_centroid_zmatrix(self):
 
       zmatrix = '''\
-            X21   :1  DISTANCE  :2   180.0000   :3   180.0000
+            X21   :1  DISTANCE  :2   ANGLE      :3     90.0000
             C21  X21  1.3940    :1   90.0000    :2  180.0000
             C22  C21  1.3774 X21   60.0000      :1   90.0000
-            C23  C22  1.3774 C21  120.0000 X21    0.0000
+            C23  C22  1.3774 C21  120.0000 X21   DIHEDRAL
             C24  C23  1.3774 C22  120.0000 C21    0.0000
             C25  C24  1.3774 C23  120.0000 C22    0.0000
             C26  C25  1.3774 C24  120.0000 C23    0.0000
@@ -135,3 +137,4 @@ class IodoBenzene(object):
       ]
 
       return textwrap.dedent(zmatrix), atom_name
+
