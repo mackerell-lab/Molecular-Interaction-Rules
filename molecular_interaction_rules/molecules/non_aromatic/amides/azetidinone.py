@@ -87,7 +87,7 @@ class Azetidinone(object):
     def get_monomer_b_hydrogen_zmatrix(self):
 
         zmatrix = '''\
-            H21   :1    DISTANCE   :2 90.0000     :3 180.0000
+            H21   :1    DISTANCE   :2 ANGLE     :3 DIHEDRAL
             X21  H21  1.0000   :1  90.0000     :2    0.0000
             N21  H21  1.0158  X21  90.0000     :2  180.0000
             C22  N21  1.3624  H21  130.7810    :1  180.0000
@@ -110,9 +110,9 @@ class Azetidinone(object):
     def get_monomer_b_oxygen_zmatrix(self):
 
         zmatrix = '''\
-            O21   :1  DISTANCE   :2  180.0000    :3   180.0000
-            C22  O21  1.1855     :1  180.0000    :2   180.0000
-            C21  C22  1.5314  O21  135.8730   :1     0.0000
+            O21   :1  DISTANCE  :2  ANGLE     :3   90.0000
+            C22  O21  1.1855    :1  180.0000  :2   DIHEDRAL
+            C21  C22  1.5314  O21  135.8730   :1    0.0000
             C23  C21  1.5484  C22   85.4333  O21  173.2256
             N21  C22  1.3624  C21   91.3607  C23   -5.5311
             H21  N21  1.0158  C22  130.7810  C21 -161.6569
@@ -129,3 +129,4 @@ class Azetidinone(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
