@@ -9,63 +9,6 @@ import textwrap
 
 class Imidazole(object):
 
-    '''
-
-    CGenFF
-
-    GROUP
-    ATOM CG   CG2R51  -0.05 !       HD1    HE1
-    ATOM HG   HGR52    0.09 !        |     /
-    ATOM CD2  CG2R51   0.22 !       ND1--CE1
-    ATOM HD2  HGR52    0.10 !      /     ||
-    ATOM ND1  NG2R51  -0.36 ! HG-CG      ||
-    ATOM HD1  HGP1     0.32 !     \\     ||
-    ATOM CE1  CG2R53   0.25 !      CD2--NE2
-    ATOM HE1  HGR52    0.13 !       |
-    ATOM NE2  NG2R50  -0.70 !      HD2
-
-    DGenFF
-
-    RESI IMID          0.000 ! Imidazole
-    !
-    !       HD1    HE1
-    !        |     /
-    !       ND1--CE1
-    !      /     ||
-    ! HG-CG      ||
-    !     \\     ||
-    !      CD2--NE2
-    !       |      :
-    !      HD2
-    !
-
-    GROUP
-    ATOM CG   CD2R5A  -0.343  ALPHA -1.632  THOLE 0.949
-    ATOM HG   HDR5A    0.215
-    ATOM CD2  CD2R5A   0.037  ALPHA -1.626  THOLE 0.949
-    ATOM HD2  HDR5A    0.091
-    ATOM ND1  ND2R5A  -0.053  ALPHA -1.393  THOLE 0.670
-    ATOM HD1  HDP1A    0.244
-    ATOM CE1  CD2R5B   0.040  ALPHA -1.632  THOLE 1.568
-    ATOM HE1  HDR5B    0.107
-    ATOM NE2  ND2R5B   0.000  ALPHA -1.044  THOLE 0.788
-    ATOM LP1  LPD     -0.338
-
-    Rule 2, 3
-    '''
-
-    # Covered
-
-    __CGENFF_ATOM_TYPES__ = {
-      'RC1': ['CG2R51', 'NG2R51', 'CG2R53', 'NG2R51'],
-      'N1': ['ND2R5B']
-    }
-
-    __DGENFF_ATOM_TYPES__ = {
-      'RC1': ['CD2R5A', 'CD2R5B', 'ND2R5B', 'ND2R5A'],
-      'N1': ['NG2R50']
-    }
-
     def __init__(self):
 
         self.resi_name = 'IMID'
