@@ -60,7 +60,7 @@ class Propane(object):
     def get_monomer_b_terminal_hydrogen_zmatrix(self):
 
         zmatrix = '''\
-              H21   :1 DISTANCE  :2 90.0000 :3  90.0000
+              H21   :1 DISTANCE  :2 ANGLE :3  DIHEDRAL
               X21 H21 1.0000  :1  90.0000   :2   0.0000
               C12 H11 1.1026 X21  90.0000   :1  180.0000
               C11 C12 1.5332 H11 110.7849   1  180.0000
@@ -110,7 +110,7 @@ class Propane(object):
     def get_monomer_b_center_hydrogen_zmatrix(self):
 
       zmatrix = '''\
-            H21  :1 DISTANCE  :2 90.0000 :3  90.0000
+            H21  :1 DISTANCE  :2 ANGLE :3  DIHEDRAL
             X21 H21 1.0000  :1  90.0000   :2   0.0000
             C11 H11 1.1034  X21  90.0000   :1  180.0000
             C12 C11 1.5332 H11 109.5193    :1  180.0000
@@ -131,3 +131,4 @@ class Propane(object):
       ]
 
       return textwrap.dedent(zmatrix), atom_name
+
