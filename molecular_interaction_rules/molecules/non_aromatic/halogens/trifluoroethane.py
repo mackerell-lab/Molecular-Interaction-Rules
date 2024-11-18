@@ -60,8 +60,8 @@ class Trifluoroethane(object):
     def get_monomer_b_fluoro_zmatrix(self):
 
         zmatrix = '''\
-              F21  :1  DISTANCE :2  90.0000   :3  90.0000
-              X21 CL21 1.0000  :1  90.0000   :2   0.0000
+              F21  :1  DISTANCE :2  ANGLE   :3  DIHEDRAL
+              X21 F21 1.0000  :1  90.0000   :2   0.0000
               C21 F21 1.3624  X21  90.0000   :1  180.0000
               C22 C21 1.5028 F21 111.9888    :1  180.0000
               H21 C22 1.0974 C21 108.9446 F21 180.0000
