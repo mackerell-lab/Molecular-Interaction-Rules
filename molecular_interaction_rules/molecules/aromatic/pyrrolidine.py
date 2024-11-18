@@ -88,10 +88,10 @@ class Pyrrolidine(object):
   def get_monomer_b_aromatic_zmatrix(self):
 
       zmatrix = '''\
-        X21   :1  DISTANCE   :2  180.0000    :3   90.0000
-        N21  X21  1.1000   :1  90.0000    :2  180.0000
+        X21   :1  DISTANCE   :2  ANGLE    :3   90.0000
+        N21  X21  1.1000     :1  90.0000    :2  180.0000
         C21  N21  1.4776  X21   60.0000   :1   90.0000
-        C22  C21  1.5529  N21  106.8472  X21    0.0000
+        C22  C21  1.5529  N21  106.8472  X21   DIHEDRAL
         C23  C22  1.5579  C21  104.0259  N21  -23.3895
         H21  C23  1.1000  C22  112.4064  C21 -121.2645
         H22  C23  1.1000  C22  110.5580  C21  118.4384
@@ -114,12 +114,11 @@ class Pyrrolidine(object):
 
   def get_monomer_b_hydrogen_zmatrix(self):
 
-
     zmatrix = '''\
-        H21    :1  DISTANCE     :2  90.0000    :3   90.0000
-        X21  H21    1.0000  :1   90.0000   :2    0.0000
-        N21   H21    1.0243    X21  90.0000    :1  180.0000
-        C21   N21    1.4776    H21  107.9129   :1  180.0000
+        H21    :1  DISTANCE  :2   ANGLE    :3   90.0000
+        X21  H21    1.0000   :1   90.0000   :2   0.0000
+        N21   H21    1.0243    X21  90.0000    :1  DIHEDRAL
+        C21   N21    1.4776    H21  107.9129   :1  0.0000
         C22   C21    1.5529    N21  106.8472   H21  -75.7702
         C23   C22    1.5579    C21  104.0259   N21  -23.3895
         C24   N21    1.4774    C21  102.8883   C22   38.1662
@@ -139,3 +138,5 @@ class Pyrrolidine(object):
     ]
 
     return textwrap.dedent(zmatrix), atom_name
+
+
