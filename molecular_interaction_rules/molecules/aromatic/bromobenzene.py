@@ -9,57 +9,6 @@ import textwrap
 
 class BromoBenzene(object):
 
-  '''
-
-    CGenFF
-
-    RESI BROB          0.000 ! C6H5Br, Bromobenzene + lone pair , isg/fylin
-    GROUP                    !
-    ATOM C1   CG2R61  -0.06  !
-    ATOM H1   HGR62    0.15  !         H5     H4
-    ATOM C2   CG2R61  -0.115 !          \ ___ /
-    ATOM H2   HGR61    0.115 !          C5---C4
-    ATOM C3   CG2R61  -0.115 !          /     \
-    ATOM H3   HGR61    0.115 ! LP-BR--C6      C3--H3
-    ATOM C4   CG2R61  -0.115 !          \\   //
-    ATOM H4   HGR61    0.115 !          C1---C2
-    ATOM C5   CG2R61  -0.06  !          / \
-    ATOM H5   HGR62    0.15  !         H1     H2
-    ATOM C6   CG2R61  -0.05  !
-    ATOM BR   BRGR1   -0.18  !
-    ATOM LP   LPH      0.05  !
-
-    DGenFF
-
-    RESI  bromob      0.0000
-    GROUP
-    ATOM C1     CQ2R6A   -0.027   ALPHA   -1.7561  THOLE   0.9915   ! Penalty =  0.520
-    ATOM H1     HQR6A     0.083                                     ! Penalty =  0.343
-    ATOM C2     CQ2R6A   -0.106   ALPHA   -1.7287  THOLE   1.0120   ! Penalty =  0.381
-    ATOM H2     HQR6A     0.099                                     ! Penalty =  0.254
-    ATOM C3     CQ2R6A   -0.097   ALPHA   -1.9153  THOLE   0.9977   ! Penalty =  0.192
-    ATOM H3     HQR6A     0.091                                     ! Penalty =  0.004
-    ATOM C4     CQ2R6A   -0.106   ALPHA   -1.7287  THOLE   1.0120   ! Penalty =  0.381
-    ATOM H4     HQR6A     0.099                                     ! Penalty =  0.254
-    ATOM C5     CQ2R6A   -0.028   ALPHA   -1.7561  THOLE   0.9915   ! Penalty =  0.520
-    ATOM H5     HQR6A     0.083                                     ! Penalty =  0.343
-    ATOM C6     CQ2R6A   -0.045   ALPHA   -2.0526  THOLE   0.9329   ! Penalty =  1.145
-    ATOM BR     BRQR1    -0.096   ALPHA   -3.2077  THOLE   1.0836   ! Penalty =  2.798
-    ATOM LP1    LPD       0.050                                     ! Penalty =  0.000
-
-    Rule 1,2
-
-  '''
-
-  __CGENFF_ATOM_TYPES__ = {
-      'BR1': ['BRGR1'],
-      'RC1': ['CG2R61'],
-      'H1': ['HGR62']
-  }
-
-  __DGENFF_ATOM_TYPES__ = {
-  }
-
   def __init__(self):
 
     self.resi_name = 'BROB'
