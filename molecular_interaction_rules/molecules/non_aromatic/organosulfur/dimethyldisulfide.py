@@ -9,7 +9,7 @@
 import textwrap
 
 class DimethylDisulfide(object):
-
+    
     def __init__(self):
 
         self.resi_name = 'DMDS'
@@ -68,9 +68,9 @@ class DimethylDisulfide(object):
     def get_monomer_b_sulphur_lone_pair(self):
 
         zmatrix = '''\
-            S21  :1  DISTANCE  X11   90.0000  :2  180.0000
-            S22 S21  2.0847     :1  126.2746  X11  90.0000
-            C21 S22  1.8292  S21  100.6848   X11    0.0000
+            S21  :1  DISTANCE  :2   ANGLE  :3  DIHEDRAL
+            S22 S21  2.0847     :1  126.2746  :2  180.0000
+            C21 S22  1.8292  S21  100.6848    :2    0.0000
             C22 S21  1.8292  S22  100.8205  C21   83.9593
             H21 C21  1.1017  S22  106.5343  S21  178.1127
             H22 C21  1.1017  S22  110.6848  S21   59.1606
@@ -87,4 +87,6 @@ class DimethylDisulfide(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
+
 
