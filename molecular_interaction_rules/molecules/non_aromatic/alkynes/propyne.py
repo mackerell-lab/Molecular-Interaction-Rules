@@ -70,7 +70,7 @@ class Propyne(object):
     def get_monomer_b_terminal_hydrogen_zmatrix(self):
 
         zmatrix = '''\
-            H21   :1   DISTANCE   :2  125.0000   :3  180.0000
+            H21   :1   DISTANCE   :2  ANGLE   :3  DIHEDRAL
             X21  H21   1.0000     :1  90.0000    :2    0.0000
             C23  H21   1.0737    X21  90.0000    :1  180.0000
             X22  C23   1.0000    H21  90.0000   X21   0.00000
@@ -87,4 +87,6 @@ class Propyne(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
+
 
