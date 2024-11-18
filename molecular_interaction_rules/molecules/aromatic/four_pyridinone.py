@@ -9,54 +9,6 @@ import textwrap
 
 class FourPyridinone(object):
 
-  '''
-
-  RESI 4PYO           0.00 ! C5H5NO, 4(1H)-pyridinone (CAS # 108-96-3), isg
-  GROUP
-  ATOM O1     OG2D4  -0.57
-  ATOM C1     CG2R63  0.46
-  ATOM C21    CG2R62 -0.38 !       H22  H32
-  ATOM C31    CG2R62 -0.07 !        |    |
-  ATOM N1     NG2R61 -0.11 !       C22==C32
-  ATOM C32    CG2R62 -0.07 !      /        \
-  ATOM C22    CG2R62 -0.38 ! O1==C1         N1--H1
-  ATOM H21    HGR62   0.22 !      \        /
-  ATOM H22    HGR62   0.22 !       C21==C31
-  ATOM H32    HGR62   0.20 !        |    |
-  ATOM H31    HGR62   0.20 !       H21  H31
-  ATOM H1     HGP1    0.28
-
-  RESI  12FF      0.0000
-  GROUP
-  ATOM C1     CQ2R6H   -0.155   ALPHA   -1.8388  THOLE   1.2546   ! Penalty =  0.158
-  ATOM C2     CQ2R6H   -0.211   ALPHA   -1.5810  THOLE   1.3002   ! Penalty =  0.200
-  ATOM N1     NQ2R6C   -0.051   ALPHA   -1.6259  THOLE   1.2751   ! Penalty =  0.187
-  ATOM C3     CQ2R6H   -0.211   ALPHA   -1.5810  THOLE   1.3002   ! Penalty =  0.200
-  ATOM C4     CQ2R6H   -0.154   ALPHA   -1.8388  THOLE   1.2546   ! Penalty =  0.158
-  ATOM C5     CQ2O4A    0.397   ALPHA   -1.5640  THOLE   1.3799   ! Penalty =  0.213
-  ATOM O1     OQ2C1B   -0.000   ALPHA   -1.2426  THOLE   1.3081   ! Penalty =  0.193
-  ATOM H1     HQR6A     0.133                                     ! Penalty =  0.146
-  ATOM H2     HQR6B     0.180                                     ! Penalty =  0.272
-  ATOM H3     HQP1A     0.315                                     ! Penalty =  0.129
-  ATOM H4     HQR6B     0.180                                     ! Penalty =  0.272
-  ATOM H5     HQR6A     0.133                                     ! Penalty =  0.146
-  ATOM LP1    LPQO1    -0.278                                     ! Penalty =  0.052
-  ATOM LP2    LPQO1    -0.278                                     ! Penalty =  0.052
-
-  Rule 1,2
-
-  '''
-
-  __CGENFF_ATOM_TYPES__ = {
-      'RC1': ['NG2R61', 'CG2R63', 'CG2R62'],
-      'O1': ['OG2D4']
-  }
-
-  __DGENFF_ATOM_TYPES__ = {
-    'RC1': ['NQ2R6C', 'CG2R63', 'CQ2O4A'],
-    'O1': ['OQ2C1B']
-  }
-
   def __init__(self):
 
     self.resi_name = '4PYO'
