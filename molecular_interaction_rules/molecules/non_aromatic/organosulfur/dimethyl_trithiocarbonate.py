@@ -123,7 +123,7 @@ class DimethylTrithiocarbonate(object):
     def get_monomer_b_conjoining_sulphur(self):
 
         zmatrix = '''\
-            S21   :1  DISTANCE   :2  180.0000    :3    90.0000
+            S21   :1  DISTANCE   :2  ANGLE    :3    DIHEDRAL
             C21  S21 1.7783      :1  180.0000    :2   180.0000
             S22  C21 1.7783  S21  118.9556       :1     0.0000
             C22  S22 1.8317  C21  102.3499  S21   42.4811
@@ -148,7 +148,7 @@ class DimethylTrithiocarbonate(object):
     def get_monomer_b_carbonyl_sulphur(self):
 
         zmatrix = '''\
-            S23   :1  DISTANCE   :2  180.0000    :3    90.0000
+            S23   :1  DISTANCE   :2  ANGLE    :3    DIHEDRAL
             C21  S23 1.6514      :1  180.0000    :2   180.0000
             S22  C21 1.7783  S23  120.5202       :1     0.0000
             C22  S22 1.8317  C21  102.3499  S23 -137.5173
@@ -169,3 +169,4 @@ class DimethylTrithiocarbonate(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
