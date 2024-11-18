@@ -24,7 +24,6 @@ class Oxetane(object):
 
         monomer_a_species = {
             'O1': self.get_monomer_a_oxygen_zmatrix(),
-            'H1': self.get_monomer_a_hydrogen_zmatrix()
         }
 
         return monomer_a_species
@@ -42,7 +41,7 @@ class Oxetane(object):
           H14  C12 1.0841 C11 115.4945  O11  115.3869
           H15  C11 1.0841 C12 115.7849  C13  115.2639
           H16  C11 1.0841 C12 115.7845  C13 -115.2619
-          X21  O21 1.0000 C21  90.0000  C22  180.0000
+          X11  O11 1.0000 C11  90.0000  C12  180.0000
           0 1
         '''
 
@@ -86,10 +85,10 @@ class Oxetane(object):
     def get_monomer_b_oxygen_zmatrix(self):
 
         zmatrix = '''\
-            O21  :1  DISTANCE  X11   90.0000    :2  180.0000
-            C21  O21 1.4643   :1   135.0000   X11    0.0000
-            C22  C21 1.5367   :1   135.0000   X11  180.0000
-            C23  C22 1.5367 C21  83.9135  O21    0.0009
+            O21  :1  DISTANCE  :2   ANGLE   :3  DIHEDRAL
+            C21  O21 1.4643    :1   135.0000   :2    0.0000
+            C22  C21 1.5367   O21   90.0000    :1  180.0000
+            C23  C22 1.5367 C21  83.9135  O21    0.0000
             H21  C23 1.0841 C22 115.7845  C21  115.2619
             H22  C23 1.0841 C22 115.7849  C21 -115.2639
             H23  C22 1.0841 C21 115.4944  O21 -115.3849
@@ -105,3 +104,4 @@ class Oxetane(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
