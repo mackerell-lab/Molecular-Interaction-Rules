@@ -1,27 +1,10 @@
 # Imports
 # -------
-
 import textwrap
 
 class Methanol(object):
 
-    __CGENFF_ATOM_TYPES__ = {
-      'O1': ['OG311'],
-      'H1': ['HGP1'],
-    }
-
-    __DGENFF_ATOM_TYPES__ = {
-      'O1': ['OD31A'],
-      'H1': ['HDP1A'],
-    }
-
     def __init__(self):
-
-        '''
-
-        Methanol Monomer Z-Matrices
-
-        '''
 
         self.resi_name = 'MEOH'
 
@@ -97,9 +80,10 @@ class Methanol(object):
     def oxygen_acceptor_b_zmatrix(self):
 
         zmatrix = '''\
-            O21   :1  DISTANCE  :2   90.0000  :3  180.0000
-            H21  O21  0.9657   :1  126.2746  X11  180.0000
-            C21  O21  1.4349   :1  126.2746  X11    0.0000
+            O21   :1  DISTANCE  :2 ANGLE      :3    DIHEDRAL
+            H21  O21  0.9657  :1  236.0000    :2    0.0000
+            X21  H21  1.0000   O21   90.0000  :1    90.0000
+            C21  O21  1.4349   H21 111.8699    X21   0.0000
             H22  C21  1.1029  O21  111.8699  H21    0.0000
             H23  C21  1.1029  O21  111.8699  H21  122.9683
             H24  C21  1.1029  O21  111.8699  H21 -118.5158
@@ -115,10 +99,10 @@ class Methanol(object):
     def monomer_b_hydrogen_acceptor_zmatrix(self):
 
       zmatrix = '''\
-            H21   :1  DISTANCE  :2   90.0000   :3   90.0000
-            X21  H21    1.0000  :1   90.0000   :2    0.0000
-            O21  H21    0.9657  X21  90.0000   :1  180.0000
-            C21  O21    1.4349  H21 120.0000  :1  180.0000
+            H21   :1  DISTANCE  :2   ANGLE     :3   90.0000
+            X21  H21    1.0000  :1   90.0000   :2   180.0000
+            O21  H21    0.9657  X21  90.0000   :1   180.0000
+            C21  O21    1.4349  H21 120.0000  X21  DIHEDRAL
             H22  C21    1.1029  O21   111.8699  H21    0.0000
             H23  C21    1.1029  O21   111.8699  H21  122.9683
             H24  C21    1.1029  O21   111.8699  H21 -118.5158
