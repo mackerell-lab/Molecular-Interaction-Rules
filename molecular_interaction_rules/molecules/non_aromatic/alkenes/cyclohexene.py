@@ -42,7 +42,7 @@ class Cyclohexene(object):
   def get_monomer_b_sp2_hydrogen_zmatrix(self):
 
     zmatrix = '''\
-        H21     :1    DISTANCE     :2 180.0000        :3 180.0000
+        H21     :1    DISTANCE     :2 ANGLE        :3 DIHEDRAL
         X21     H21   1.0000       :1  90.0000        :2    0.0000
         C23    H21    1.1066      X21  90.0000        :2  180.0000
         C22    C23    1.5353      H21  117.8400       :1  180.0000
@@ -129,7 +129,7 @@ class Cyclohexene(object):
   def get_monomer_b_sp3_zmatrix(self):
 
     zmatrix = '''\
-      H21    :1    DISTANCE     :2 180.0000        :3 180.0000
+      H21    :1    DISTANCE     :2 ANGLE        :3 DIHEDRAL
       X21   H21   1.0000        :1  90.0000        :2    0.0000
       C21   H21  1.1066  X21  90.0000        :2  180.0000
       C22   C21  1.5353  H21  110.8679        :1  180.0000
@@ -154,3 +154,4 @@ class Cyclohexene(object):
       'H21', 'C2', 'C1', 'C6', 'C5', 'C4', 'C3', 'H5', 'H41', 'H42', 'H31', 'H32', 'H6', 'H11', 'H12', 'H22',
     ]
     return textwrap.dedent(zmatrix), atom_name
+
