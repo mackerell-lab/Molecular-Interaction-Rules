@@ -9,51 +9,6 @@ import textwrap
 
 class FluoroBenzene(object):
 
-    '''
-
-    RESI FLUB           0.00     ! C6H5F, fluorobenzene, adm jr.
-    GROUP
-    ATOM C1   CG2R61  -0.10
-    ATOM H1   HGR62    0.15  !      H5     H4
-    ATOM C2   CG2R61  -0.115 !       \ ___ /
-    ATOM H2   HGR61    0.115 !       C5---C4
-    ATOM C3   CG2R61  -0.115 !       /     \
-    ATOM H3   HGR61    0.115 ! F6--C6      C3--H3
-    ATOM C4   CG2R61  -0.115 !      \\     //
-    ATOM H4   HGR61    0.115 !       C1---C2
-    ATOM C5   CG2R61  -0.10  !       /     \
-    ATOM H5   HGR62    0.15  !      H1     H2
-    ATOM C6   CG2R66   0.11
-    ATOM F6   FGR1    -0.21
-
-    RESI  fluoro      0.0000
-    GROUP
-    ATOM C1     CQ2R6A   -0.120   ALPHA   -1.6955  THOLE   0.9629   ! Penalty =  0.013
-    ATOM H1     HQR6A     0.123                                     ! Penalty =  0.014
-    ATOM C2     CQ2R6A   -0.147   ALPHA   -1.7319  THOLE   0.9558   ! Penalty =  0.010
-    ATOM H2     HQR6A     0.125                                     ! Penalty =  0.010
-    ATOM C3     CQ2R6A   -0.097   ALPHA   -1.8986  THOLE   0.9887   ! Penalty =  0.007
-    ATOM H3     HQR6A     0.105                                     ! Penalty =  0.004
-    ATOM C4     CQ2R6A   -0.147   ALPHA   -1.7319  THOLE   0.9558   ! Penalty =  0.010
-    ATOM H4     HQR6A     0.125                                     ! Penalty =  0.010
-    ATOM C5     CQ2R6A   -0.119   ALPHA   -1.6955  THOLE   0.9629   ! Penalty =  0.013
-    ATOM H5     HQR6A     0.123                                     ! Penalty =  0.014
-    ATOM C6     CQ2R6A    0.247   ALPHA   -1.4107  THOLE   0.9392   ! Penalty =  0.024
-    ATOM F      FQR1     -0.218   ALPHA   -0.7689  THOLE   1.1151   ! Penalty =  0.074
-
-    Rule 1,2
-
-    '''
-
-    __CGENFF_ATOM_TYPES__ = {
-      'RC1': ['CG2R61', 'CG2R66'],
-      'F1': ['FGR1'],
-      'H1': ['HGR62', 'CG2R61']
-    }
-
-    __DGENFF_ATOM_TYPES__ = {
-    }
-
     def __init__(self):
 
         self.resi_name = 'FLUB'
