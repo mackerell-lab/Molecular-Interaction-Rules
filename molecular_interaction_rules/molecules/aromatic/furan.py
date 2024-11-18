@@ -9,50 +9,6 @@ import textwrap
 
 class Furan(object):
 
-    '''
-
-    CGenFF
-
-    GROUP                    !  H2        H1
-    ATOM C1   CG2R51   0.10  !    \ ____ /
-    ATOM H1   HGR52    0.14  !    C2----C1
-    ATOM C2   CG2R51  -0.25  !     |     \
-    ATOM H2   HGR51    0.15  !     |      O5
-    ATOM C3   CG2R51  -0.25  !     |____ /
-    ATOM H3   HGR51    0.15  !    C3----C4
-    ATOM C4   CG2R51   0.10  !    /      \
-    ATOM H4   HGR52    0.14  !  H3        H4
-    ATOM O5   OG2R50  -0.28
-
-    RESI  furan      0.0000
-    GROUP
-    ATOM O      OQ2R5A    0.000   ALPHA   -1.1505  THOLE   0.9463   ! Penalty =  0.072
-    ATOM C1     CQ2R5A   -0.005   ALPHA   -1.5943  THOLE   1.0184   ! Penalty =  0.025
-    ATOM H1     HQP1C     0.105                                     ! Penalty =  0.037
-    ATOM C2     CQ2R5A   -0.153   ALPHA   -1.6501  THOLE   1.0121   ! Penalty =  0.023
-    ATOM H2     HQP1C     0.111                                     ! Penalty =  0.026
-    ATOM C3     CQ2R5A   -0.153   ALPHA   -1.6501  THOLE   1.0121   ! Penalty =  0.023
-    ATOM H3     HQP1C     0.111                                     ! Penalty =  0.026
-    ATOM C4     CQ2R5A   -0.005   ALPHA   -1.5943  THOLE   1.0184   ! Penalty =  0.025
-    ATOM H4     HQP1C     0.105                                     ! Penalty =  0.037
-    ATOM LP1    LPQO2    -0.058                                     ! Penalty =  0.017
-    ATOM LP2    LPQO2    -0.058                                     ! Penalty =  0.017
-
-    Rule 2,4
-    '''
-
-    # Covered
-
-    __CGENFF_ATOM_TYPES__ = {
-      'RC1': ['CG2R51', 'OG2R50'],
-      'O1': ['OG2R50']
-    }
-
-    __DGENFF_ATOM_TYPES__ = {
-      'RC1': ['CQ2R5A', 'OQ2R5A'],
-      'O1': ['OQ2R5A']
-    }
-
     def __init__(self):
 
         self.resi_name = 'FURA'
