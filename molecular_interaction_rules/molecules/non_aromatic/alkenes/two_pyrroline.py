@@ -56,7 +56,8 @@ class TwoPyrroline(object):
 
         '''
 
-        monomer_a_species = {
+        monomer_b_species = {
         }
 
-        return monomer_a_species
+        return monomer_b_species
+
