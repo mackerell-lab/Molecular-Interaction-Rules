@@ -63,7 +63,7 @@ class OneThreeDibutene(object):
     def get_sp2_monomer_b_terminal_hydrogen(self):
 
         zmatrix = '''\
-              H21    :1    DISTANCE     :2 90.0000     :3 90.0000
+              H21    :1    DISTANCE     :2 ANGLE     :3 DIHEDRAL
               X21   H21   1.0000        :1  90.0000    :2  0.0000
               C21   H21  1.1066  X21  90.0000      :2  180.0000
               C22   C21  1.5353  H21  110.8679     :1  180.0000
@@ -82,4 +82,5 @@ class OneThreeDibutene(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
 
