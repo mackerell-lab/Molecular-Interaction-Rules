@@ -5,7 +5,6 @@
 
 # Imports
 # -------
-
 import textwrap
 
 class Hydrazine(object):
@@ -58,7 +57,7 @@ class Hydrazine(object):
     def get_monomer_b_nitrogen_zmatrix(self):
 
         zmatrix = '''\
-            H21   :1   DISTANCE     :2  90.0000   :3   90.0000
+            H21   :1   DISTANCE     :2  ANGLE   :3   DIHEDRAL
             X21  H21    1.0000      :1  90.0000   :2    0.0000
             N22  H21   1.0219   X21   90.0000     :2  180.0000
             N21  N22   1.4446   H21 111.4203      :1  180.0000
@@ -74,4 +73,5 @@ class Hydrazine(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
 
