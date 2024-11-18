@@ -63,9 +63,9 @@ class Imidazolium(object):
     def monomer_b_aromatic_zmatrix(self):
 
       zmatrix = '''\
-            X21    :1  DISTANCE  :2   180.0000  :3   90.0000
+            X21    :1  DISTANCE  :2   ANGLE  :3   90.0000
             C21  X21  1.1134     :1   90.0000   :2  180.0000
-            C22  C21  1.3918  X21   59.0000     :1   90.0000
+            C22  C21  1.3918  X21   59.0000     :1   DIHEDRAL
             N21  C22  1.3834  C21  110.7737   X21    0.0000
             C23  N21  1.3351  C22  105.1514   C21   -0.0000
             N22  C21  1.3815  C22  104.8582   N21    0.0000
@@ -132,10 +132,10 @@ class Imidazolium(object):
     def monomer_b_hydrogen_zmatrix(self):
 
         zmatrix = '''\
-              H21  :1  DISTANCE  :2 90.0000      :3   90.0000
+              H21  :1  DISTANCE  :2 ANGLE      :3   90.0000
               X21  H21 1.0000    :1 90.0000      :2    0.0000
-              C23  H21  1.0782  X21  90.0000     :2  180.0000
-              N21  C23  1.3351  H21  126.1042    :1  180.0000
+              C23  H21  1.0782  X21  90.0000     :1  DIHEDRAL
+              N21  C23  1.3351  H21  126.1042    :1    0.0000
               C22  N21  1.3834  C23  105.1514   H21 -180.0000
               C21  C22  1.3918  N21  110.7737   C23    0.0000
               N22  C21  1.3815  C22  104.8582   N21    0.0000
@@ -151,4 +151,5 @@ class Imidazolium(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
 
