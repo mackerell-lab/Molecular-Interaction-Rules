@@ -6,6 +6,68 @@ import textwrap
 
 class Benzene(object):
 
+    '''
+
+    CGenFF
+
+    GROUP
+    ATOM CG   CG2R61  -0.115
+    ATOM HG   HGR61    0.115 !      HD1  HE1
+    ATOM CD1  CG2R61  -0.115 !       |    |
+    ATOM HD1  HGR61    0.115 !      CD1--CE1
+    ATOM CD2  CG2R61  -0.115 !      /      \
+    ATOM HD2  HGR61    0.115 ! HG--CG      CZ--HZ
+    ATOM CE1  CG2R61  -0.115 !      \      /
+    ATOM HE1  HGR61    0.115 !      CD2--CE2
+    ATOM CE2  CG2R61  -0.115 !       |    |
+    ATOM HE2  HGR61    0.115 !      HD2  HE2
+    ATOM CZ   CG2R61  -0.115
+    ATOM HZ   HGR61    0.115
+
+    DGenFF
+
+    RESI BENZ          0.000 ! benzene
+    !
+    !            HD1  HE1
+    !             |    |
+    !            CD1--CE1
+    !            /      \
+    !       HG--CG      CZ--HZ
+    !            \      /
+    !            CD2--CE2
+    !             |    |
+    !            HD2  HE2
+    !
+    GROUP
+    ATOM CG   CD2R6A  -0.1106  ALPHA -1.615  THOLE 1.195
+    ATOM HG   HDR6A    0.1106
+    ATOM CD1  CD2R6A  -0.1106  ALPHA -1.615  THOLE 1.195
+    ATOM HD1  HDR6A    0.1106
+    ATOM CD2  CD2R6A  -0.1106  ALPHA -1.615  THOLE 1.195
+    ATOM HD2  HDR6A    0.1106
+    ATOM CE1  CD2R6A  -0.1106  ALPHA -1.615  THOLE 1.195
+    ATOM HE1  HDR6A    0.1106
+    ATOM CE2  CD2R6A  -0.1106  ALPHA -1.615  THOLE 1.195
+    ATOM HE2  HDR6A    0.1106
+    ATOM CZ   CD2R6A  -0.1106  ALPHA -1.615  THOLE 1.195
+    ATOM HZ   HDR6A    0.1106
+
+    Rule 1,2
+
+    '''
+
+    # Covered
+
+    __CGENFF_ATOM_TYPES__ = {
+      'RC1': ['CG2R61'],
+      'H1': ['HGR61'],
+    }
+
+    __DGENFF_ATOM_TYPES__ = {
+      'RC1': ['CD2R6A'],
+      'H1': ['HDR6A'],
+    }
+
     def __init__(self):
 
         self.resi_name = 'BENZ'
@@ -35,6 +97,13 @@ class Benzene(object):
         return monomer_b_species
 
     def monomer_a_aromatic_zmatrix(self):
+
+        '''
+
+        if X11 is first monomer a
+        then :1 C11 :2 C12 :C13
+
+        '''
 
         zmatrix = '''\
             X11
@@ -89,10 +158,10 @@ class Benzene(object):
     def monomer_b_t_shaped_zmatrix(self):
 
         zmatrix = '''\
-            H21  X11  DISTANCE  :2   90.0000  :3   90.0000
-            X21  H21  1.0000 X11   90.0000  :2    0.0000
-            C21  H21  1.0756 X21   90.0000 X11  180.0000
-            C22  C21  1.3774 H21  120.0000 X11  180.0000
+            H21   :1  DISTANCE  :2   ANGLE  :3   90.0000
+            X21  H21  1.0000  :1   90.0000  :2    0.0000
+            C21  H21  1.0756 X21   90.0000  :1  DIHEDRAL
+            C22  C21  1.3774 H21  120.0000  :1    0.0000
             C23  C22  1.3774 C21  120.0000 H21  180.0000
             C24  C23  1.3774 C22  120.0000 C21    0.0000
             C25  C24  1.3774 C23  120.0000 C22    0.0000
@@ -115,10 +184,10 @@ class Benzene(object):
     def monomer_b_aromatic_zmatrix(self):
 
         zmatrix = '''\
-            X21   :1  DISTANCE  :2   180.0000  :3   90.0000
+            X21  H11  DISTANCE  :2   ANGLE  :3   90.0000
             C21  X21  1.3940  :1   90.0000  :2  180.0000
             C22  C21  1.3774 X21   60.0000  :1   90.0000
-            C23  C22  1.3774 C21  120.0000 X21    0.0000
+            C23  C22  1.3774 C21  120.0000 X21  DIHEDRAL
             C24  C23  1.3774 C22  120.0000 C21    0.0000
             C25  C24  1.3774 C23  120.0000 C22    0.0000
             C26  C25  1.3774 C24  120.0000 C23    0.0000
