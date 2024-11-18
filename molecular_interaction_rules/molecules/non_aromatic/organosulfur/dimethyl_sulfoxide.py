@@ -92,7 +92,7 @@ class DimethylSulfoxide(object):
     def get_monomer_b_oxygen_zmatrix(self):
 
         zmatrix = '''\
-            O21   :1  DISTANCE   :2  180.0000    :3    90.0000
+            O21   :1  DISTANCE   :2 ANGLE    :3    DIHEDRAL
             S21  O21  1.5447     :1  180.0000    :2   180.0000
             C21  S21  1.8243  O21  130.0000      :1     0.0000
             C22  S21  1.8243  C21   95.8631  O21  180.0000
