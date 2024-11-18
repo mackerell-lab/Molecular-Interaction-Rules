@@ -71,7 +71,7 @@ class Trimethylamine(object):
               H17  C13  1.0841  N11  109.8360  C11 -175.9681
               H18  C13  1.0841  N11  109.8360  C11  -57.4137
               H19  C13  1.0949  N11  113.0081  C11   63.3090
-              X11  N11  1.0000  C11   90.0000  H11    0.0000
+              X11  H11  1.0000  C11   90.0000  N11    0.0000
               0 1
           '''
 
@@ -93,7 +93,7 @@ class Trimethylamine(object):
     def get_nitrogen_monomer_b_zmatrix(self):
 
         zmatrix = '''\
-            N21   :1  DISTANCE  :2  180.0000  :3    90.0000
+            N21   :1  DISTANCE  :2 ANGLE  :3   DIHEDRAL
             C21  N21  1.4617     :1  180.0000  :2   180.0000
             H21  C21  1.0841  N21  109.8360     :1     0.0000
             H22  C21  1.0841  N21  109.8360  H21 -118.5543
@@ -118,10 +118,10 @@ class Trimethylamine(object):
     def get_hydrogen_monomer_b_zmatrix(self):
 
         zmatrix = '''\
-              H21   :1   DISTANCE     :2  90.0000   :3   90.0000
+              H21   :1   DISTANCE     :2  ANGLE   :3   DIHEDRAL
               X21  H21    1.0000      :1  90.0000   :2    0.0000
-              C21  H21  1.0841  X21   90.0000       :2    0.0000
-              N21  C21  1.4617  H21  109.8360       :1  180.0000
+              C21  H21  1.0841  X21   90.0000       :2  180.0000
+              N21  C21  1.4617  H21  109.8360       :1    0.0000
               H22  C21  1.0841  N21  109.8360  H21 -118.5543
               H23  C21  1.0949  N21  113.0081  H21  120.7228
               C22  N21  1.4617  C21  111.9391  H21  -57.4136
@@ -140,3 +140,4 @@ class Trimethylamine(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_names
+
