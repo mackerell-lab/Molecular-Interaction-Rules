@@ -27,8 +27,6 @@ class Isoxazole(object):
 
         monomer_b_species = {
             'RC1': self.monomer_b_pi_stack_zmatrix(),
-            'O1': self.monomer_b_oxygen_zmatrix(),
-            'N1': self.monomer_b_nitrogen_zmatrix()
         }
 
         return monomer_b_species
@@ -99,10 +97,10 @@ class Isoxazole(object):
     def monomer_b_pi_stack_zmatrix(self):
 
         zmatrix = '''\
-          X21  :1  DISTANCE  :2   90.0000  :3   90.0000
+          X21  :1  DISTANCE  :2   ANGLE    :3   90.0000
           O21 X21 1.1000    :1   90.0000   :2  180.0000
-          N21 O21 1.3936   X21   60.0000    :1   90.0000
-          C21 N21 1.3368   O21  105.3771   X21  180.0000
+          N21 O21 1.3936   X21   60.0000   :1   90.0000
+          C21 N21 1.3368   O21  105.3771   X21  DIHEDRAL
           C22 C21 1.4240   N21  111.9773   O21   -0.0000
           C23 O21 1.3580   N21  109.3403   C21   -0.0000
           H21 C22 1.0866   C21  128.8980   N21 -180.0000
@@ -113,46 +111,6 @@ class Isoxazole(object):
 
         atom_name = [
           'O5', 'N4', 'C3', 'C2', 'C1', 'H2', 'H3', 'H1'
-        ]
-
-        return textwrap.dedent(zmatrix), atom_name
-
-    def monomer_b_oxygen_zmatrix(self):
-
-        zmatrix = '''\
-            O21  :1   DISTANCE     :2  180.0000    :3  -0.0000
-            N21 O21 1.3936    :1   120.0000   :3   90.0000
-            C21 N21 1.3368   O21  105.3771    :1  180.0000
-            C22 C21 1.4240   N21  111.9773   O21   -0.0000
-            C23 O21 1.3580   N21  109.3403   C21   -0.0000
-            H21 C22 1.0866   C21  128.8980   N21 -180.0000
-            H22 C23 1.0873   O21  115.7339   N21 -180.0000
-            H23 C21 1.0888   N21  118.3782   O21 -180.0000
-            0 1
-        '''
-
-        atom_name = [
-          'O5', 'N4', 'C3', 'C2', 'C1', 'H2', 'H3', 'H1'
-        ]
-
-        return textwrap.dedent(zmatrix), atom_name
-
-    def monomer_b_nitrogen_zmatrix(self):
-
-        zmatrix = '''\
-            N21  :1   DISTANCE     :2  180.0000    :3  -0.0000
-            O21 N21 1.3936    :1   120.0000   :3   90.0000
-            C21 N21 1.3368   O21  105.3771    :1  180.0000
-            C22 C21 1.4240   N21  111.9773   O21   -0.0000
-            C23 O21 1.3580   N21  109.3403   C21   -0.0000
-            H21 C22 1.0866   C21  128.8980   N21 -180.0000
-            H22 C23 1.0873   O21  115.7339   N21 -180.0000
-            H23 C21 1.0888   N21  118.3782   O21 -180.0000
-            0 1
-        '''
-
-        atom_name = [
-          'N4', 'O5', 'C3', 'C2', 'C1', 'H2', 'H3', 'H1'
         ]
 
         return textwrap.dedent(zmatrix), atom_name
