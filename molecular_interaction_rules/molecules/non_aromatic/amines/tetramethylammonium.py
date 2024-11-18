@@ -98,3 +98,4 @@ class Tetramethylammonium(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
