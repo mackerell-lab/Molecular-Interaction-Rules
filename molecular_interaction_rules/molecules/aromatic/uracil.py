@@ -85,8 +85,8 @@ class Uracil(object):
   def monomer_b_oxygen_zmatrix(self):
 
       zmatrix = '''\
-            O21  :1  DISTANCE  :2  180.0000    X11    -0.0000
-            C21 O21  1.2314    :1  180.0000    X11     0.0000
+            O21  :1  DISTANCE  :2    ANGLE   :3   90.0000
+            C21 O21  1.2314    :1  180.0000   :2  DIHEDRAL
             C22 C21  1.4628  O21  -126.1129   :1    0.0000
             C23 C22  1.3634  C21  119.6473  O21 -180.0000
             N21 C23  1.3808  C22  121.7593  C21   -0.0000
@@ -110,10 +110,10 @@ class Uracil(object):
   def monomer_b_aromatic_zmatrix(self):
 
       zmatrix = '''\
-            X21  :1  DISTANCE  :2   180.0000  :3   90.0000
+            X21  :1  DISTANCE  :2   ANGLE  :3   90.0000
             C22 X21  1.2940    :1   90.0000   :2  180.0000
             C21 C22  1.4628  X21   59.0000    :1   90.0000
-            O21 C21  1.2940  C22  126.1129  X21  180.0000
+            O21 C21  1.2940  C22  126.1129  X21  DIHEDRAL
             C23 C22  1.3634  C21  119.6473  O21 -180.0000
             N21 C23  1.3808  C22  121.7593  C21   -0.0000
             C24 N21  1.3939  C23  123.6682  C22   -0.0000
@@ -131,3 +131,4 @@ class Uracil(object):
       ]
 
       return textwrap.dedent(zmatrix), atom_name
+
