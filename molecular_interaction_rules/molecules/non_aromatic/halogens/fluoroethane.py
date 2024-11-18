@@ -83,7 +83,7 @@ class Fluoroethane(object):
     def get_monomer_b_fluoroethane_zmatrix(self):
 
         zmatrix = '''\
-            F21  :1 DISTANCE  :2 180.0000  :3  180.0000
+            F21  :1 DISTANCE  :2 ANGLE  :3  DIHEDRAL
             X21 F21 1.0000  :1  90.0000   :2   0.0000
             C21 F21 1.4174 X21  90.0000   :1  180.0000
             C22 C21 1.5152 F21 109.5365   :1  180.0000
@@ -105,8 +105,8 @@ class Fluoroethane(object):
     def get_monomer_b_carbon_zmatrix(self):
 
         zmatrix = '''\
-                  H25  :1 DISTANCE :2  90.0000  :3  90.0000
-                  X21 H21 1.0000   :1  90.0000  :2   0.0000
+                  H25  :1 DISTANCE :2  ANGLE  :3  DIHEDRAL
+                  X21 H25 1.0000   :1  90.0000  :2   0.0000
                   C21 H25 1.1006 X21  90.0000   :1  180.0000
                   F21 C21 1.4174 H25 112.0835   :1  180.0000
                   C22 C21 1.5152 F21 109.5365 H25   100.0000
@@ -123,3 +123,4 @@ class Fluoroethane(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
