@@ -15,6 +15,12 @@ class ThreeAminoPyridine(object):
 
   def get_monomer_a_species(self):
 
+    '''
+
+    Get the Monomer A Species
+
+    '''
+
     monomer_a_species = {
         'H1': self.monomer_a_nitrogen_zmatrix()
     }
@@ -58,10 +64,10 @@ class ThreeAminoPyridine(object):
   def monomer_b_nitrogen_zmatrix(self):
 
       zmatrix = '''\
-            H21  X11  DISTANCE   :2   90.0000    :3   90.0000
-            X21   H21  1.0000    :1   90.0000   :2    0.0000
+            H21  X11  DISTANCE   :2   ANGLE    :3   0.0000
+            X21   H21  1.0000    :1   90.0000   :2   DIHEDRAL
             N21  H21  1.0162    X21   90.0000  :1  180.0000
-            C21  N21  1.4056   H21  114.1487    :1  180.0000
+            C21  N21  1.4056   H21  114.1487   X21   0.0000
             C22  C21  1.4145   N21  120.8173   H21 -153.4115
             N22  C22  1.3483   C21  124.2902   N21 -176.4540
             C23  N22  1.3530   C22  117.3356   C21   -0.0680
@@ -81,3 +87,4 @@ class ThreeAminoPyridine(object):
       ]
 
       return textwrap.dedent(zmatrix), atom_name
+
