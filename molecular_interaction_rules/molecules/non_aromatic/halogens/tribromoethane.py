@@ -60,7 +60,7 @@ class Tribromoethane(object):
   def get_monomer_b_bromo_zmatrix(self):
 
     zmatrix = '''\
-      BR21   :1    DISTANCE    :2 90.0000      :3  90.0000
+      BR21   :1    DISTANCE    :2 ANGLE  :3  DIHEDRAL
       X21   BR21   1.0000      :1  90.0000     :2   0.0000
       C21   BR21   1.9400    X21  90.0000    :1  180.0000
       C22   C21    1.5054   BR21  110.1466   :1  180.0000
@@ -77,4 +77,6 @@ class Tribromoethane(object):
     ]
 
     return zmatrix, atom_name
+
+
 
