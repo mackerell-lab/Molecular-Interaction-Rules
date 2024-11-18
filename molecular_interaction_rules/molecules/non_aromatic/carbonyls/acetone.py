@@ -109,7 +109,7 @@ class Acetone(object):
     def get_monomer_b_carbonyl_oxygen(self):
 
         zmatrix = '''\
-            O21  :1  DISTANCE   :2  180.0000    :3    90.0000
+            O21  :1  DISTANCE   :2  ANGLE    :3    DIHEDRAL
             C21  O21  1.2307    :1  180.0000    :2   180.0000
             C22  C21  1.3986   O21  120.0000    :1     0.0000
             C23  C21  1.5180  C22  116.5719  O21  180.0000
@@ -127,4 +127,5 @@ class Acetone(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
 
