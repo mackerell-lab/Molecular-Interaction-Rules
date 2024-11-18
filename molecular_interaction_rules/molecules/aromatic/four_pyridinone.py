@@ -9,6 +9,54 @@ import textwrap
 
 class FourPyridinone(object):
 
+  '''
+
+  RESI 4PYO           0.00 ! C5H5NO, 4(1H)-pyridinone (CAS # 108-96-3), isg
+  GROUP
+  ATOM O1     OG2D4  -0.57
+  ATOM C1     CG2R63  0.46
+  ATOM C21    CG2R62 -0.38 !       H22  H32
+  ATOM C31    CG2R62 -0.07 !        |    |
+  ATOM N1     NG2R61 -0.11 !       C22==C32
+  ATOM C32    CG2R62 -0.07 !      /        \
+  ATOM C22    CG2R62 -0.38 ! O1==C1         N1--H1
+  ATOM H21    HGR62   0.22 !      \        /
+  ATOM H22    HGR62   0.22 !       C21==C31
+  ATOM H32    HGR62   0.20 !        |    |
+  ATOM H31    HGR62   0.20 !       H21  H31
+  ATOM H1     HGP1    0.28
+
+  RESI  12FF      0.0000
+  GROUP
+  ATOM C1     CQ2R6H   -0.155   ALPHA   -1.8388  THOLE   1.2546   ! Penalty =  0.158
+  ATOM C2     CQ2R6H   -0.211   ALPHA   -1.5810  THOLE   1.3002   ! Penalty =  0.200
+  ATOM N1     NQ2R6C   -0.051   ALPHA   -1.6259  THOLE   1.2751   ! Penalty =  0.187
+  ATOM C3     CQ2R6H   -0.211   ALPHA   -1.5810  THOLE   1.3002   ! Penalty =  0.200
+  ATOM C4     CQ2R6H   -0.154   ALPHA   -1.8388  THOLE   1.2546   ! Penalty =  0.158
+  ATOM C5     CQ2O4A    0.397   ALPHA   -1.5640  THOLE   1.3799   ! Penalty =  0.213
+  ATOM O1     OQ2C1B   -0.000   ALPHA   -1.2426  THOLE   1.3081   ! Penalty =  0.193
+  ATOM H1     HQR6A     0.133                                     ! Penalty =  0.146
+  ATOM H2     HQR6B     0.180                                     ! Penalty =  0.272
+  ATOM H3     HQP1A     0.315                                     ! Penalty =  0.129
+  ATOM H4     HQR6B     0.180                                     ! Penalty =  0.272
+  ATOM H5     HQR6A     0.133                                     ! Penalty =  0.146
+  ATOM LP1    LPQO1    -0.278                                     ! Penalty =  0.052
+  ATOM LP2    LPQO1    -0.278                                     ! Penalty =  0.052
+
+  Rule 1,2
+
+  '''
+
+  __CGENFF_ATOM_TYPES__ = {
+      'RC1': ['NG2R61', 'CG2R63', 'CG2R62'],
+      'O1': ['OG2D4']
+  }
+
+  __DGENFF_ATOM_TYPES__ = {
+    'RC1': ['NQ2R6C', 'CG2R63', 'CQ2O4A'],
+    'O1': ['OQ2C1B']
+  }
+
   def __init__(self):
 
     self.resi_name = '4PYO'
@@ -84,9 +132,10 @@ class FourPyridinone(object):
   def monomer_b_oxygen_zmatrix(self):
 
       zmatrix = '''\
-          O21   :1  DISTANCE   :2  180.0000    :3    90.0000
-          C21  O21  1.2500     :1  180.0000    :2   180.0000
-          C22  C21  1.4671   O21  123.1498     :1     0.0000
+          O21   :1  DISTANCE   :2   ANGLE      :3   90.0000
+          X21  O21  1.0000     :1   90.0000    :2    0.0000
+          C21  O21  1.2500     X21  90.0000    :1  DIHEDRAL
+          C22  C21  1.3986     O21  120.0000   :1    0.0000
           C23  C22  1.3741   C21  121.7979 O21 -180.0000
           N21  C23  1.3754   C22  120.9490 C21   -0.0000
           C24  N21  1.3754   C23  120.8056 C22   -0.0000
@@ -109,10 +158,10 @@ class FourPyridinone(object):
   def monomer_b_aromatic_zmatrix(self):
 
       zmatrix = '''\
-          X21   :1  DISTANCE  :2   180.0000   :3   180.0000
-          C22  X21 1.2940     :1   90.0000    :2  180.0000
-          C21  C22  1.4671   X21  60.0000     :1   90.0000
-          O21  C21  1.2500   C22  123.1498 X21  180.0000
+          X21   :1  DISTANCE  :2   ANGLE   :3     90.0000
+          C22  X21 1.2940     :1   90.0000    :2   0.0000
+          C21  C22  1.4671   X21  60.0000     :1  DIHEDRAL
+          O21  C21  1.2500   C22  123.1498 X21    0.0000
           C23  C22  1.3741   C21  121.7979 O21 -180.0000
           N21  C23  1.3754   C22  120.9490 C21   -0.0000
           C24  N21  1.3754   C23  120.8056 C22   -0.0000
@@ -130,3 +179,4 @@ class FourPyridinone(object):
       ]
 
       return textwrap.dedent(zmatrix), atom_name
+
