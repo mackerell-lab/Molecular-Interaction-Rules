@@ -33,7 +33,7 @@ class Acetonitrile(object):
 
         monomer_b_species = {
             'N1': self.monomer_b_nitrogen_z_matrix(),
-            'C1': self.monomer_a_carbon_z_matrix()
+            'C1': self.monomer_b_carbon_z_matrix()
         }
 
         return monomer_b_species
@@ -43,7 +43,8 @@ class Acetonitrile(object):
         zmatrix = '''\
             C11
             N11 C11 1.1854
-            C12 C11 1.4710 N11 180.0000
+            X11 N11 1.0000 C11  90.0000
+            C12 C11 1.4710 X11  90.0000 C11  0.0000
             H11 C12 1.0990 C11 109.8381 N11 279.5961
             H12 C12 1.0990 C11 109.8381 N11  20.4038
             H13 C12 1.0990 C11 109.8381 N11 140.4038
@@ -79,7 +80,7 @@ class Acetonitrile(object):
     def monomer_b_nitrogen_z_matrix(self):
 
         zmatrix = '''\
-              N21  :1   DISTANCE  :2  180.0000    :3  180.0000
+              N21  :1   DISTANCE  :2  ANGLE    :3  DIHEDRAL
               X21 N21   1.0000    :1  90.0000    :2    0.0000
               C21 N21   1.1854   X21  90.0000    :1  180.0000
               X22 C21   1.0000   N21  90.0000   X21   0.00000
@@ -99,7 +100,7 @@ class Acetonitrile(object):
     def monomer_b_carbon_z_matrix(self):
 
         zmatrix = '''\
-                C21  :1   DISTANCE  :2  90.0000    :3  90.0000
+                C21  :1   DISTANCE  :2  ANGLE    :3  DIHEDRAL
                 X21 N21   1.0000    :1  90.0000    :2    0.0000
                 N21 C21   1.1854   X21  90.0000    :1  180.0000
                 X22 C21   1.0000   N21  90.0000   X21   0.00000
@@ -115,3 +116,4 @@ class Acetonitrile(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
