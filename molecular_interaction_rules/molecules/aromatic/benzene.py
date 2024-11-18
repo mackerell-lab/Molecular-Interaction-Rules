@@ -6,68 +6,6 @@ import textwrap
 
 class Benzene(object):
 
-    '''
-
-    CGenFF
-
-    GROUP
-    ATOM CG   CG2R61  -0.115
-    ATOM HG   HGR61    0.115 !      HD1  HE1
-    ATOM CD1  CG2R61  -0.115 !       |    |
-    ATOM HD1  HGR61    0.115 !      CD1--CE1
-    ATOM CD2  CG2R61  -0.115 !      /      \
-    ATOM HD2  HGR61    0.115 ! HG--CG      CZ--HZ
-    ATOM CE1  CG2R61  -0.115 !      \      /
-    ATOM HE1  HGR61    0.115 !      CD2--CE2
-    ATOM CE2  CG2R61  -0.115 !       |    |
-    ATOM HE2  HGR61    0.115 !      HD2  HE2
-    ATOM CZ   CG2R61  -0.115
-    ATOM HZ   HGR61    0.115
-
-    DGenFF
-
-    RESI BENZ          0.000 ! benzene
-    !
-    !            HD1  HE1
-    !             |    |
-    !            CD1--CE1
-    !            /      \
-    !       HG--CG      CZ--HZ
-    !            \      /
-    !            CD2--CE2
-    !             |    |
-    !            HD2  HE2
-    !
-    GROUP
-    ATOM CG   CD2R6A  -0.1106  ALPHA -1.615  THOLE 1.195
-    ATOM HG   HDR6A    0.1106
-    ATOM CD1  CD2R6A  -0.1106  ALPHA -1.615  THOLE 1.195
-    ATOM HD1  HDR6A    0.1106
-    ATOM CD2  CD2R6A  -0.1106  ALPHA -1.615  THOLE 1.195
-    ATOM HD2  HDR6A    0.1106
-    ATOM CE1  CD2R6A  -0.1106  ALPHA -1.615  THOLE 1.195
-    ATOM HE1  HDR6A    0.1106
-    ATOM CE2  CD2R6A  -0.1106  ALPHA -1.615  THOLE 1.195
-    ATOM HE2  HDR6A    0.1106
-    ATOM CZ   CD2R6A  -0.1106  ALPHA -1.615  THOLE 1.195
-    ATOM HZ   HDR6A    0.1106
-
-    Rule 1,2
-
-    '''
-
-    # Covered
-
-    __CGENFF_ATOM_TYPES__ = {
-      'RC1': ['CG2R61'],
-      'H1': ['HGR61'],
-    }
-
-    __DGENFF_ATOM_TYPES__ = {
-      'RC1': ['CD2R6A'],
-      'H1': ['HDR6A'],
-    }
-
     def __init__(self):
 
         self.resi_name = 'BENZ'
