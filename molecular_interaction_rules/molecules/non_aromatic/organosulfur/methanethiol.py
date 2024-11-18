@@ -58,8 +58,8 @@ class MethaneThiol(object):
     def get_monomer_b_hydrogen_sulphur_zmatrix(self):
 
         zmatrix = '''\
-            H21   :1  DISTANCE   :2   90.0000  :3   90.0000
-            X21  H21  1.0000     :1   90.0000  :2   90.0000
+            H21   :1  DISTANCE   :2   ANGLE  :3   DIHEDRAL
+            X21  H21  1.0000     :1   90.0000  :2   180.0000
             S21  H21  1.3496     :1   180.0000  :2   0.0000
             C21  S21  1.8329    H21   96.6463  :1  90.0000
             H22  C21 1.0990 S21  106.1319  H21  -180.0000
