@@ -9,67 +9,6 @@ import textwrap
 
 class Methyleneoxindole(object):
 
-  '''
-
-  RESI MEOI         0.000 ! C9H7NO, methyleneoxindole, kevo & xxwy
-
-  GROUP
-  ATOM C5   CG2DC3  -0.41
-  ATOM H51  HGA5     0.21
-  ATOM H52  HGA5     0.21
-  ATOM C6   CG25C1  -0.10 !            H51    H52
-  ATOM C7   CG2R53   0.67 !               \  /
-  ATOM O7   OG2D1   -0.57 !         H13    C5
-  ATOM N8   NG2R51  -0.45 !          |     ||
-  ATOM H8   HGP1     0.32 !         C13    C6   O7
-  ATOM C9   CG2RC0   0.25 !        //  \  /  \ //
-  ATOM C10  CG2R61  -0.34 ! H12--C12    C14   C7
-  ATOM H10  HGR61    0.24 !       |     ||    |
-  ATOM C11  CG2R61  -0.20 ! H11--C11    C9----N8
-  ATOM H11  HGR61    0.22 !        \\  / \
-  ATOM C12  CG2R61  -0.23 !         C10  H8
-  ATOM H12  HGR61    0.21 !          |
-  ATOM C13  CG2R61  -0.32 !         H10
-  ATOM H13  HGR61    0.28
-  ATOM C14  CG2RC0   0.01
-
-  RESI  3methy      0.0000
-  GROUP
-  ATOM O      OQ2C1A    0.001   ALPHA   -1.2596  THOLE   0.6736   ! Penalty =  1.475
-  ATOM N      NQ2R5A   -0.217   ALPHA   -1.5134  THOLE   1.2194   ! Penalty = 12.037
-  ATOM C1     CQ2R6F    0.061   ALPHA   -1.6095  THOLE   1.5389   ! Penalty = 100.679
-  ATOM C2     CQ2R6F    0.025   ALPHA   -1.5217  THOLE   1.7787   ! Penalty =  1.449
-  ATOM C3     CQ25C1    0.029   ALPHA   -1.7104  THOLE   1.2187   ! Penalty =  7.317
-  ATOM C4     CQ2R5B    0.362   ALPHA   -1.3774  THOLE   1.2479   ! Penalty =  3.413
-  ATOM C5     CQ2R6A   -0.122   ALPHA   -1.7625  THOLE   1.2030   ! Penalty =  0.498
-  ATOM C6     CQ2R6A   -0.241   ALPHA   -1.7300  THOLE   1.2387   ! Penalty =  0.233
-  ATOM C7     CQ2R6A   -0.122   ALPHA   -1.8197  THOLE   1.1777   ! Penalty =  0.172
-  ATOM C8     CQ2R6A   -0.153   ALPHA   -1.8521  THOLE   1.2886   ! Penalty =  0.065
-  ATOM C9     CQ2DC3   -0.383   ALPHA   -1.6137  THOLE   1.1132   ! Penalty = 75.325
-  ATOM H1     HQP1A     0.327                                     ! Penalty =  0.516
-  ATOM H2     HQR6A     0.119                                     ! Penalty =  0.396
-  ATOM H3     HQR6A     0.142                                     ! Penalty =  0.132
-  ATOM H4     HQR6A     0.116                                     ! Penalty =  0.088
-  ATOM H5     HQR6A     0.121                                     ! Penalty =  0.017
-  ATOM H6     HQ2C1B    0.164                                     ! Penalty = 41.892
-  ATOM H7     HQ2C1B    0.164                                     ! Penalty = 41.892
-  ATOM LP1    LPQO1    -0.228                                     ! Penalty =  0.186
-  ATOM LP2    LPQO1    -0.165                                     ! Penalty =  0.186
-
-  Rule 2
-
-  '''
-
-  # Covered
-
-  __CGENFF_ATOM_TYPES__ = {
-    'RC1': ['CG25C1', 'CG2RC0'],
-  }
-
-  __DGENFF_ATOM_TYPES__ = {
-    'RC1': ['CQ2R6A', 'CQ2R6F'],
-  }
-
   def __init__(self):
 
       self.resi_name = 'MEOI'
