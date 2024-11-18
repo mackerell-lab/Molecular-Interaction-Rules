@@ -10,7 +10,6 @@ import textwrap
 
 class Acetate(object):
 
-
     def __init__(self):
 
         self.resi_name = 'ACET'
@@ -18,7 +17,6 @@ class Acetate(object):
     def get_monomer_a_species(self):
 
         monomer_a_species = {
-            # 'C1': self.get_monomer_a_carbon_zmatrix(),
             'O1': self.get_oxygen_anion_zmatrix(),
         }
 
@@ -34,7 +32,7 @@ class Acetate(object):
             H11 C12 1.1143 C11 106.2755 O11  101.0000
             H12 C12 1.1151 C11 110.3728 O11  -18.0000
             H13 C12 1.1183 C11 108.2226 O11 -139.0000
-            X11 O11 1.0000 C11  90.0000 O12    0.0000
+            X11 O11 1.0000 C11  90.0000 C12    0.0000
             -1 1
         '''
 
@@ -67,7 +65,7 @@ class Acetate(object):
     def get_monomer_b_species(self):
 
         monomer_b_species = {
-            'O1': self.get_monomer_b_oxygen_zmatrix()
+            'O1': self.get_monomer_b_oxygen_zmatrix(),
         }
 
         return monomer_b_species
@@ -75,9 +73,10 @@ class Acetate(object):
     def get_monomer_b_oxygen_zmatrix(self):
 
         zmatrix = '''\
-            O21  :1  DISTANCE :2  180.0000   :3   90.0000
-            C21 O21 1.2720     :1  180.0000  :2  180.0000
-            C22 C21 1.5044 O21 118.4946      :1    0.0000
+            O21  :1 DISTANCE  :2  ANGLE   :3  DIHEDRAL
+            X21 O21 1.0000     :1  90.0000  :2   0.0000
+            C21 O21 1.2720    X21  90.0000   :1  180.0000
+            C22 C21 1.5044    O21 118.4946  X21    0.0000
             O22 C21 1.2720 O21 116.9653 C22  180.0000
             H21 C22 1.1143 C21 106.2755 O21  101.0000
             H22 C22 1.1151 C21 110.3728 O21  -18.0000
@@ -91,3 +90,4 @@ class Acetate(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
