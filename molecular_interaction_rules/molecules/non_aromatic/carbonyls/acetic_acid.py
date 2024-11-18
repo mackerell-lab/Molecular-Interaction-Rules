@@ -110,7 +110,7 @@ class AceticAcid(object):
     def get_monomer_b_hydrogen_zmatrix(self):
 
         zmatrix = '''\
-            H21  :1  DISTANCE  :2 90.0000 :3 90.0000
+            H21  :1  DISTANCE  :2 ANGLE :3 DIHEDRAL
             X21 H21 1.0000  :1  90.0000   :2    0.0000
             C22 H21 1.1183 X21  90.0000   :2  180.0000
             C21 C22 1.5044 H21 108.2226   :1  180.0000
