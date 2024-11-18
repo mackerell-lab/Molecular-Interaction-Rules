@@ -7,6 +7,15 @@
 # -------
 
 import textwrap
+#!/usr/bin/env python3
+#
+# Lennard-Jones-Drill-2: Dimethyl Phosphate
+# -----------------------------------------
+
+# Imports
+# -------
+
+import textwrap
 
 class DimethylPhosphate(object):
 
@@ -93,3 +102,4 @@ class DimethylPhosphate(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
