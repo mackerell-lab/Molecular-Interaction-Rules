@@ -12,7 +12,7 @@ class Acetaldehyde(object):
 
     def __init__(self):
 
-        self.resi_name = 'acet'
+        self.resi_name = ''
 
     def get_monomer_a_species(self):
 
