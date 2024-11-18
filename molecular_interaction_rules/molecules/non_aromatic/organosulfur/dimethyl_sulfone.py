@@ -10,49 +10,6 @@ import textwrap
 
 class DimethylSulfone(object):
 
-    '''
-
-    RESI DMSN          0.00 ! C2H6O2S, dimethyl sulfone, xhe
-    GROUP
-    ATOM S    SG3O2    0.14
-    ATOM O1   OG2P1   -0.36 !     H31
-    ATOM O2   OG2P1   -0.36 !      |
-    ATOM C3   CG331    0.02 !  H32-C3-H33
-    ATOM H31  HGA3     0.09 !      |
-    ATOM H32  HGA3     0.09 !   O1=S=O2
-    ATOM H33  HGA3     0.09 !      |
-    ATOM C4   CG331    0.02 !  H42-C4-H43
-    ATOM H41  HGA3     0.09 !      |
-    ATOM H42  HGA3     0.09 !     H41
-    ATOM H43  HGA3     0.09
-
-    RESI  methyl      0.0000
-    GROUP
-    ATOM C1     CQ33A    -0.281   ALPHA   -1.8726  THOLE   0.9529   ! Penalty =  0.430
-    ATOM H1     HQA3A     0.109                                     ! Penalty =  0.105
-    ATOM H2     HQA3A     0.109                                     ! Penalty =  0.105
-    ATOM H3     HQA3A     0.109                                     ! Penalty =  0.105
-    ATOM S      SQ3OB     0.985   ALPHA   -2.0445  THOLE   0.9153   ! Penalty =  0.530
-    ATOM C2     CQ33A    -0.280   ALPHA   -1.8726  THOLE   0.9529   ! Penalty =  0.430
-    ATOM H4     HQA3A     0.109                                     ! Penalty =  0.105
-    ATOM H5     HQA3A     0.109                                     ! Penalty =  0.105
-    ATOM H6     HQA3A     0.109                                     ! Penalty =  0.105
-    ATOM O1     OQ2C2B   -0.539   ALPHA   -1.1555  THOLE   0.9666   ! Penalty =  0.199
-    ATOM O2     OQ2C2B   -0.539   ALPHA   -1.1555  THOLE   0.9666   ! Penalty =  0.199
-
-    Rule 3
-    '''
-
-    __CGENFF_ATOM_TYPES__ = {
-        'S1': ['SG3O2'],
-        'O1': ['OG2P1']
-    }
-
-    __DGENFF_ATOM_TYPES__ = {
-      'S1': ['SQ3OB'],
-      'O1': ['OQ2C2B']
-    }
-
     def __init__(self):
 
         self.resi_name = 'DMSN'
