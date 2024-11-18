@@ -101,8 +101,8 @@ class EthoxyGuanidine(object):
   def get_monomer_b_carbon_zmatrix(self):
 
     zmatrix = '''\
-          C21    1   DISTANCE   :2  180.0000   X11    -0.0000
-          N21   C21   1.2644     :1  236.0000    X11     0.0000
+          C21    :1   DISTANCE   :2  ANGLE       :3   DIHEDRAL
+          N21   C21   1.2644     :1  236.0000    :2     0.0000
           O21   N21   1.3918    C21  110.5211    :1    0.0000
           N22   C21   1.3720    N21  126.2972  O21    6.4406
           H21   N22   0.9970    C21  114.2111  N21 -143.9845
