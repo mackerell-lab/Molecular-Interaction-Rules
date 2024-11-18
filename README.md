@@ -132,6 +132,15 @@ H26  C26  1.0756 C25  120.0000 C21  180.0000
 | Organophosphorus      | Methyl Phosphate, Dimethyl Phosphate |  
 | Organosulfur      | Dimethyl sulfone, Dimethyl Sulfoxide, Dimethyl trithiocarbonate, Dimethyl Disulfide, Ethylsulfanyl Phosphonic Acid, Methanethiol, Methylthiolate |  
 
+<h2 align="center">Local Installation</h2>
+
+Clone the repository and run
+
+```
+python -m pip install -e .
+```
+
+
 <h2 align="center">Contact</h2>
 
 Lead Developer: Suliman Sharif
