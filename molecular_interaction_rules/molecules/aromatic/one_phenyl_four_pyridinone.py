@@ -8,7 +8,7 @@
 import textwrap
 
 class OnePhenylFourPyridinone(object):
-
+    
     def __init__(self):
 
         self.resi_name = '1PH4PO'
@@ -112,10 +112,10 @@ class OnePhenylFourPyridinone(object):
     def get_monomer_b_ring_centroid_zmatrix(self):
 
         zmatrix = '''\
-            X21    :1  DISTANCE  :2   180.0000     :3   90.0000
-            C21   X21  1.3940    :1   90.0000      :2  180.0000
+            X21    :1  DISTANCE  :2   ANGLE        :3   90.0000
+            C21   X21  1.3940    :1   90.0000      :2   180.0000
             N21   C21  1.4305    X21  -180.0000    :1   90.0000
-            C22   C21  1.4059    N21  119.9462    X21   0.0000
+            C22   C21  1.4059    N21  119.9462    X21  DIHEDRAL
             C23   C22  1.4059    C21  119.7972    N21  179.5279
             H21   C23  1.0748    C22  119.5699    C21 -179.9400
             C24   C23  1.4059    C22  120.2738    C21    0.9482
@@ -148,10 +148,10 @@ class OnePhenylFourPyridinone(object):
     def get_monomer_b_ring_centroid_nitrogen_zmatrix(self):
 
         zmatrix = '''\
-            X21    :1  DISTANCE  :2   180.0000     :3   90.0000
+            X21    :1  DISTANCE  :2   ANGLE     :3      90.0000
             N21   X21  1.3940    :1   90.0000      :2  180.0000
             C21   N21  1.4267    X21  180.0000    :1   90.0000
-            C22   C21  1.3869    N21  119.9462    X21   180.0000
+            C22   C21  1.3869    N21  119.9462    X21   DIHEDRAL
             C23   C22  1.3849    C21  119.7972    N21  179.5279
             H21   C23  1.0748    C22  119.5699    C21 -179.9400
             C24   C23  1.3854    C22  120.2738    C21    0.9482
@@ -180,3 +180,4 @@ class OnePhenylFourPyridinone(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
