@@ -63,7 +63,7 @@ class TwoPyrrolidinone(object):
         '''
 
         monomer_b_species = {
-            'H1': self.get_monomer_a_nitrogen_zmatrix()
+            'H1': self.get_monomer_b_nitrogen_zmatrix()
         }
 
         return monomer_b_species
@@ -71,8 +71,8 @@ class TwoPyrrolidinone(object):
     def get_monomer_b_nitrogen_zmatrix(self):
 
         zmatrix = '''\
-              H26    :1   DISTANCE  :2   90.0000   :3   90.0000
-              X21   H21    1.0000    :1   90.0000   :2    0.0000
+              H26    :1   DISTANCE  :2   ANGLE   :3   DIHEDRAL
+              X21   H26    1.0000    :1   90.0000   :2    0.0000
               N21   H26   1.0146   X21  90.0000    :1  180.0000
               C21   N21   1.3801   H26  119.5782   :1  180.0000
               C22   C21   1.5203   N21  107.0109    H26 -169.7098
@@ -93,4 +93,6 @@ class TwoPyrrolidinone(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
+
 
