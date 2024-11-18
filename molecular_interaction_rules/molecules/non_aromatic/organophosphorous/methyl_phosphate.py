@@ -57,7 +57,7 @@ class MethylPhosphate(object):
     def get_monomer_b_phosphorous_zmatrix(self):
 
         zmatrix = '''\
-          P21   :1  DISTANCE   :2  180.0000   :3    90.0000
+          P21   :1  DISTANCE   :2  ANGLE   :3    DIHEDRAL
           O21  P21  1.6437      :1  180.0000  :2   180.0000
           O22  P21  1.6437  O21   97.8486     :1     0.0000
           H21  O22  0.9705  P21  108.6226  O21  146.0940
@@ -78,3 +78,4 @@ class MethylPhosphate(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
