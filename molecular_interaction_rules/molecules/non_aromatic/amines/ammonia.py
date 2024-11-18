@@ -23,7 +23,6 @@ class Ammonia(object):
         '''
 
         monomer_a_species = {
-            # 'N1': self.get_monomer_a_nitrogen_zmatrix(),
             'H1': self.get_monomer_a_hydrogen_zmatrix()
         }
 
@@ -32,7 +31,6 @@ class Ammonia(object):
     def get_monomer_b_species(self):
 
         monomer_b_species = {
-            # 'N1': self.get_monomer_b_nitrogen_zmatrix(),
             'H1': self.get_monomer_b_hydrogen_zmatrix()
         }
 
@@ -75,8 +73,8 @@ class Ammonia(object):
     def get_monomer_b_hydrogen_zmatrix(self):
 
         zmatrix = '''\
-            X21   :1  DISTANCE  :2   180.0000 :3   90.0000
-            H21  X21  1.0000    :1   90.0000  :2  180.0000
+            X21   :1  DISTANCE  :2   ANGLE :3   DIHEDRAL
+            H21  X21  1.0000    :1   90.0000  :2  0.0000
             N21  H21  1.0202 X21 136.8000     :1   90.0000
             H22  N21  1.0202 X21 106.8000 H21 -90.0000
             H23  N21  1.0202 X21 106.8000 H21 -210.0000
