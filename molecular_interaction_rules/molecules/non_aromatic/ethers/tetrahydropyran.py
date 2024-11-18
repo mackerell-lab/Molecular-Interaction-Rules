@@ -30,7 +30,7 @@ class Tetrahydropyran(object):
 
     def get_monomer_a_oxygen_zmatrix(self):
 
-        zmatrix = '''
+        zmatrix = '''\
           O11
           C11  O11  1.4342
           C12  C11  1.5423  O11  110.2350
@@ -67,10 +67,10 @@ class Tetrahydropyran(object):
 
     def get_monomer_b_oxygen_zmatrix(self):
 
-        zmatrix = '''
-            O21   :1  DISTANCE  X11   90.0000    :2  180.0000
-            C21  O21  1.4342    :1   124.4855    X11   0.00000
-            C22  C21  1.5423    :1   124.4855    X11  180.00000
+        zmatrix = '''\
+            O21   :1  DISTANCE  :2   ANGLE       :3  DIHEDRAL
+            C21  O21  1.4342    :1   124.4855    :2   0.00000
+            C22  O21  1.5423    :1   124.4855    :2  180.00000
             C23  C22  1.5423  C21  109.3871  O21   31.6498
             H21  C23  1.0994  C22  109.7015  C21  -85.8318
             H22  C23  1.0994  C22  110.7313  C21  155.8732
