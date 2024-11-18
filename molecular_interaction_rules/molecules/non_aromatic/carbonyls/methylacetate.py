@@ -63,9 +63,9 @@ class MethylAcetate(object):
     def get_monomer_b_oxygen_zmatrix(self):
 
       zmatrix = '''\
-              O21    :1  DISTANCE  X11   90.0000  :2  180.0000
-              C21   O21  1.3264    :1  126.2746   X11  180.0000
-              C22   C21  1.5042   O21  126.2746   X11    0.0000
+              O21    :1  DISTANCE  :2  ANGLE      :3    DIHEDRAL
+              C21   O21  1.3264    :1  126.2746   :2     0.0000
+              C22   C21  1.5042   O21  126.2746   :2    180.0000
               H21   C22  1.0796   C21  109.5903    O21  179.9995
               H22   C22  1.0838   C21  109.7272    O21  -59.0373
               H23   C22  1.0838   C21  109.7273    O21   59.0363
