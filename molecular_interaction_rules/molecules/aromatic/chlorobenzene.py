@@ -9,53 +9,6 @@ import textwrap
 
 class ChloroBenzene(object):
 
-  '''
-
-  RESI CHLB          0.000 ! C6H5Cl, chlorobenzene + lonepair, isg/fylin
-  ! with Virtual atom on Cl
-  GROUP                    !
-  ATOM C1   CG2R61  -0.10  !
-  ATOM H1   HGR62    0.15  !         H5     H4
-  ATOM C2   CG2R61  -0.115 !          \ ___ /
-  ATOM H2   HGR61    0.115 !          C5---C4
-  ATOM C3   CG2R61  -0.115 !          /     \
-  ATOM H3   HGR61    0.115 ! LP-CL--C6      C3--H3
-  ATOM C4   CG2R61  -0.115 !          \\   //
-  ATOM H4   HGR61    0.115 !          C1---C2
-  ATOM C5   CG2R61  -0.10  !          / \
-  ATOM H5   HGR62    0.15  !         H1     H2
-  ATOM C6   CG2R61   0.06  !
-  ATOM CL   CLGR1   -0.21  !
-  ATOM LP   LPH      0.05  !
-
-  RESI  chloro      0.0000
-  GROUP
-  ATOM C1     CQ2R6A   -0.034   ALPHA   -1.7655  THOLE   1.0269   ! Penalty =  0.023
-  ATOM H1     HQR6A     0.098                                     ! Penalty =  0.022
-  ATOM C2     CQ2R6A   -0.115   ALPHA   -1.7645  THOLE   1.0018   ! Penalty =  0.017
-  ATOM H2     HQR6A     0.112                                     ! Penalty =  0.015
-  ATOM C3     CQ2R6A   -0.114   ALPHA   -1.8021  THOLE   0.9627   ! Penalty =  0.010
-  ATOM H3     HQR6A     0.103                                     ! Penalty =  0.004
-  ATOM C4     CQ2R6A   -0.115   ALPHA   -1.7645  THOLE   1.0018   ! Penalty =  0.017
-  ATOM H4     HQR6A     0.112                                     ! Penalty =  0.015
-  ATOM C5     CQ2R6A   -0.035   ALPHA   -1.7655  THOLE   1.0269   ! Penalty =  0.023
-  ATOM H5     HQR6A     0.098                                     ! Penalty =  0.022
-  ATOM C6     CQ2R6A   -0.001   ALPHA   -1.9172  THOLE   1.0012   ! Penalty =  0.054
-  ATOM CL     CLQR1    -0.129   ALPHA   -2.3159  THOLE   0.7703   ! Penalty =  0.137
-  ATOM LP1    LPD       0.020                                     ! Penalty =  0.000
-
-  Rule 1,2
-  '''
-
-  __CGENFF_ATOM_TYPES__ = {
-    'CL1': ['CLGR1'],
-    'RC1': ['CG2R61']
-  }
-  __DGENFF_ATOM_TYPES__ = {
-    'CL1': ['CLQR1'],
-    'RC1': ['CQ2R6A']
-  }
-
   def __init__(self):
 
     self.resi_name = 'CHLB'
