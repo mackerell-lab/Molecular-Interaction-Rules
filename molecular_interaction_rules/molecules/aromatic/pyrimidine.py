@@ -32,7 +32,6 @@ class Pyrimidine(object):
 
         monomer_b_species = {
             'RC1': self.monomer_b_aromatic_zmatrix(),
-            'N1': self.monomer_b_nitrogen_zmatrix()
         }
 
         return monomer_b_species
@@ -85,10 +84,11 @@ class Pyrimidine(object):
 
     def monomer_b_aromatic_zmatrix(self):
 
+
       zmatrix = '''\
-            X21   :1  DISTANCE   :2  180.0000    :3   90.0000
-            C21  X21  1.2940     :1  90.0000    :2  180.0000
-            C22  C21  1.4026   X21   60.0000    :1   90.0000
+            X21   :1  DISTANCE   :2  ANGLE     :3   90.0000
+            C21  X21  1.2940     :1  90.0000    :2   0.0000
+            C22  C21  1.4026   X21   60.0000    :1   DIHEDRAL
             N21  C22  1.3508   C21  122.1105   X21    0.0000
             C23  N21  1.3497   C22  115.6860   C21    0.0000
             N22  C23  1.3497   N21  127.4170   C22    0.0000
@@ -106,25 +106,3 @@ class Pyrimidine(object):
 
       return textwrap.dedent(zmatrix), atom_name
 
-    def monomer_b_nitrogen_zmatrix(self):
-
-        zmatrix = '''\
-              N21   :1   DISTANCE   :2  180.0000    X11    -0.0000
-              C22  N21  1.3508      :1  236.0000    X11     0.0000
-              C21  C22  1.4026   N21  -122.1105       :1    0.0000
-              C23  N21  1.3497   C22  115.6860   C21    0.0000
-              N22  C23  1.3497   N21  127.4170   C22    0.0000
-              C24  C21  1.4026   C22  116.9770   N21   -0.0000
-              H21  C23  1.0932   N21  116.2910   C22  180.0000
-              H22  C24  1.0946   C21  116.9770   C22  180.0000
-              H23  C22  1.0946   N21  116.4660   C23  180.0000
-              H24  C21  1.0926   C22  121.5110   N21  180.0000
-              X21  N21  1.0000   C22   90.0000   C21  180.0000
-              0 1
-          '''
-
-        atom_name = [
-          'N1', 'C6', 'C5', 'C2', 'N3', 'C4', 'H2', 'H4', 'H6', 'H5'
-        ]
-
-        return textwrap.dedent(zmatrix), atom_name
