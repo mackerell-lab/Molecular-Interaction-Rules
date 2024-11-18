@@ -32,7 +32,7 @@ class Trimethylammonium(object):
 
         zmatrix = '''\
             H20
-            N11  N11  1.0841
+            N11  H20  1.0841
             C11  N11  1.4451  H20  109.8360
             H11  C11  1.0841  N11  109.8360  H20   90.4316
             H12  C11  1.0841  N11  109.8360  H11 -118.5543
@@ -67,7 +67,7 @@ class Trimethylammonium(object):
 
         zmatrix = '''\
               H30  :1  DISTANCE   :2   180.0000  :3   180.0000
-              N21  N21  1.0841    :1   0.0000    :2   180.0000
+              N21  H30  1.0841    :1   0.0000    :2   180.0000
               C21  N21  1.4451  H30  109.8360    :1    0.0000
               H21  C21  1.0841  N21  109.8360  H30   90.4316
               H22  C21  1.0841  N21  109.8360  H21 -118.5543
@@ -89,3 +89,4 @@ class Trimethylammonium(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
