@@ -37,7 +37,7 @@ class Bromoethane(object):
       '''
 
       monomer_b_species = {
-        'BR1': self.get_monomer_a_bromo_zmatrix()
+        'BR1': self.get_monomer_b_bromo_zmatrix()
       }
 
       return monomer_b_species
@@ -48,12 +48,12 @@ class Bromoethane(object):
             BR11
             C11 BR11 1.9400
             C12 C11 1.5630 BR11 111.6187
+            X11 BR11 1.0000 C11  90.0000 C12  180.0000
             H11 C12 1.1042 C11 111.0655 BR11 -59.6837
             H12 C12 1.1042 C11 111.0655 BR11  59.6837
             H13 C12 1.1042 C11 109.5586 BR11 180.0000
             H14 C11 1.1067 C12 110.6939 H11  61.0524
             H15 C11 1.1067 C12 110.6939 H11 180.0000
-            X11 BR11 1.0000 C11  90.0000 C12  180.0000
             0 1
         '''
 
@@ -66,7 +66,7 @@ class Bromoethane(object):
     def get_monomer_b_bromo_zmatrix(self):
 
         zmatrix = '''\
-              BR21  :1 DISTANCE  :2 90.0000  :3  90.0000
+              BR21  :1 DISTANCE  :2 ANGLE  :3  DIHEDRAL
               X21 BR21 1.0000  :1  90.0000   :2   0.0000
               C21 BR21 1.9400 X21  90.0000   :1  180.0000
               C22 C21 1.5630 BR21 111.6187   :1  180.0000
@@ -83,3 +83,4 @@ class Bromoethane(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
