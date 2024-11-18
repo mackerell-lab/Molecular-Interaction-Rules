@@ -83,8 +83,8 @@ class MethylThiolate(object):
     def get_monomer_b_hydrogen_zmatrix(self):
 
         zmatrix = '''\
-            H21   :1    DISTANCE     :2 180.0000    :3 180.0000
-            X21     H21   1.0000     :1  90.0000    :2    0.0000
+            H21   :1    DISTANCE     :2 ANGLE    :3 DIHEDRAL
+            X21   H21   1.0000     :1  90.0000    :2    0.0000
             C21  H21 1.0990   X21  90.0000          :2  180.0000
             S21  C21 1.8465 H21  106.1319           :1  180.0000
             H22  C21 1.1067 S21  111.1621  H21  -118.2020
@@ -101,7 +101,7 @@ class MethylThiolate(object):
     def get_monomer_b_sulphur_zmatrix(self):
 
         zmatrix = '''\
-          S21   :1  DISTANCE   :2  180.0000    :3    90.0000
+          S21   :1  DISTANCE   :2  ANGLE    :3    DIHEDRAL
           C21  S21 1.8465      :1  180.0000    :2   180.0000
           H21  C21 1.1067 S21  106.1319        :1     0.0000
           H22  C21 1.1067 S21  111.1621  H21 -118.2020
@@ -115,3 +115,4 @@ class MethylThiolate(object):
         ]
 
         return textwrap.dedent(zmatrix), atom_name
+
