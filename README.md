@@ -67,7 +67,7 @@ H16  C16  1.0756 C15  120.0000 C11  180.0000
 
 ```
 
-#### Get Dimer Coordinates 
+#### Get Dimer Coordinates - Benzene T-Shape
 
 ```python
 
@@ -112,6 +112,24 @@ H25  C25  1.0756 C24  120.0000 C23  180.0000
 H26  C26  1.0756 C25  120.0000 C21  180.0000
 0 1
 ```
+
+#### Get Dimer Coordinates - Methylacetamide - Acetone
+
+```python
+
+from molecular_interaction_rules import MoleculerDatabase
+
+molecules = MoleculerDatabase()
+methylacetamide_acetone_dimer = molecules.form_dimer_coordinates('methylacetamide', 'H1', 'acetone', 'O1')
+
+print (benzene_dimer)
+
+```
+
+Output
+```
+```
+
 
 <h2 align="center">Moleculer Database</h2>
 
