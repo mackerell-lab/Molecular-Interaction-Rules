@@ -135,7 +135,7 @@ from molecular_interaction_rules.molecules.aromatic.imidazole import Imidazole
 from molecular_interaction_rules.molecules.aromatic.imidazolium import Imidazolium
 from molecular_interaction_rules.molecules.aromatic.indole import Indole
 from molecular_interaction_rules.molecules.aromatic.indolizine import Indolizine
-from molecular_interaction_rules.molecules.aromatic.iodobenzene import IodoBenzene
+# from molecular_interaction_rules.molecules.aromatic.iodobenzene import IodoBenzene
 from molecular_interaction_rules.molecules.aromatic.isoxazole import Isoxazole
 from molecular_interaction_rules.molecules.aromatic.methyleneoxindole import Methyleneoxindole
 from molecular_interaction_rules.molecules.aromatic.nitrobenzene import Nitrobenzene
@@ -279,7 +279,7 @@ class MoleculerDatabase(object):
             Imidazolium,
             Indole,
             Indolizine,
-            IodoBenzene,
+            # IodoBenzene,
             Isoxazole,
             Methyleneoxindole,
             Nitrobenzene,
