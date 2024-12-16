@@ -88,7 +88,7 @@ class Pyrrolidine(object):
   def get_monomer_b_aromatic_zmatrix(self):
 
       zmatrix = '''\
-        X21   :1  DISTANCE   :2  ANGLE    :3   90.0000
+         X21   :1  DISTANCE   :2  ANGLE    :3   90.0000
         N21  X21  1.1000     :1  90.0000    :2  180.0000
         C21  N21  1.4776  X21   60.0000   :1   90.0000
         C22  C21  1.5529  N21  106.8472  X21   DIHEDRAL
