@@ -141,7 +141,7 @@ class FluoroBenzene(object):
     def monomer_b_pi_stack_zmatrix(self):
 
         zmatrix = '''\
-            X21   :1  DISTANCE  :2   ANGLE     :3   90.0000
+           X21   :1  DISTANCE  :2   ANGLE     :3   90.0000
             C21  X21  1.3940    :1   90.0000   :2  0.0000
             C22  C21  1.3774 X21   60.0000     :1   DIHEDRAL
             C23  C22  1.3774 C21  120.0000 X21    0.0000
