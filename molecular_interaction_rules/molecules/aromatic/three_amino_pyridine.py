@@ -80,7 +80,7 @@ class ThreeAminoPyridine(object):
             H25  N21  1.0164   C21  114.0036   C22  -24.8625
             X21  H21  1.0000   N21   90.0000   C21  180.0000
             0 1
-          '''
+      '''
 
       atom_name = [
         'HD12', 'ND1', 'CD1', 'CE1', 'NZ', 'CE2', 'CD2', 'CG', 'HE2', 'HD2', 'HG', 'HE1', 'HD11'
