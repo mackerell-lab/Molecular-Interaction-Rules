@@ -50,7 +50,7 @@ Output:
 ['RC1', 'H1']
 ```
 
-#### Get Monomer Coordinates
+#### Get Monomer Z-Matrix
 
 ```python
 
@@ -83,7 +83,7 @@ H16  C16  1.0756 C15  120.0000 C11  180.0000
 
 ```
 
-#### Get Dimer Coordinates - Benzene T-Shape
+#### Get Dimer Z-Matrix - Benzene T-Shape
 
 ```python
 
@@ -129,7 +129,7 @@ H26  C26  1.0756 C25  120.0000 C21  180.0000
 0 1
 ```
 
-#### Get Dimer Coordinates - Methylacetamide - Acetone
+#### Get Dimer Z-Matrix - Methylacetamide - Acetone
 
 ```python
 
