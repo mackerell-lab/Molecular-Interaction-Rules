@@ -1,5 +1,9 @@
 <h1 align="center">Molecular Interaction Rules</h1>
 
+![Downloads](https://pepy.tech/badge/molecular-interaction-rules)
+![Repo Size](https://img.shields.io/github/repo-size/mackerell-lab/non-covalent-molecular-interaction-rules)
+
+
 <p align="center">
 <img width="784" alt="Screenshot 2024-05-29 at 10 14 28 PM" src="https://github.com/mackerell-lab/Non-Covalent-Molecular-Interaction-Rules/assets/11812946/880e237a-f9a3-43d5-bb75-c7aeb756f28a">
 </p>
@@ -10,11 +14,24 @@ Welcome to the Non-Covalent Molecular Interaction Rule Database. Molecules are r
 
 #### Install
 
+<h3 align="center">Pip Installation</h3>
+
+
 ```bash
 
 pip install molecular-interaction-rules 
 
 ```
+
+<h3 align="center">Local Installation</h3>
+
+Clone the repository and run
+
+```
+python -m pip install -e .
+```
+
+
 #### Get Atom Names
 
 ```python
@@ -150,22 +167,10 @@ Output
 | Organophosphorus      | Methyl Phosphate, Dimethyl Phosphate |  
 | Organosulfur      | Dimethyl sulfone, Dimethyl Sulfoxide, Dimethyl trithiocarbonate, Dimethyl Disulfide, Ethylsulfanyl Phosphonic Acid, Methanethiol, Methylthiolate |  
 
-<h2 align="center">Local Installation</h2>
-
-Clone the repository and run
-
-```
-python -m pip install -e .
-```
-
-
 <h2 align="center">Contact</h2>
 
 Lead Developer: Suliman Sharif
 Co-Authors: Anmol Kumar, Alexander D. MacKerell Jr.
-
-![Downloads](https://pepy.tech/badge/molecular-interaction-rules)
-![Repo Size](https://img.shields.io/github/repo-size/mackerell-lab/non-covalent-molecular-interaction-rules)
 
 © Copyright 2024 – University of Maryland School of Pharmacy, Computer-Aided Drug Design Center All Rights Reserved
 
