@@ -133,7 +133,7 @@ from molecular_interaction_rules import MoleculerDatabase
 molecules = MoleculerDatabase()
 methylacetamide_acetone_dimer = molecules.form_dimer_coordinates('methylacetamide', 'H1', 'acetone', 'O1')
 
-print (benzene_dimer)
+print (methylacetamide_acetone_dimer)
 
 ```
 
