@@ -8,12 +8,7 @@ Welcome to the Non-Covalent Molecular Interaction Rule Database. Molecules are r
 
 ![Downloads](https://pepy.tech/badge/molecular-interaction-rules)
 
-
-<h2 align="center">Quickstart</h2>
-
-#### Install
-
-<h3 align="center">Pip Installation</h3>
+#### Pip Installation
 
 
 ```bash
@@ -22,7 +17,7 @@ pip install molecular-interaction-rules
 
 ```
 
-<h3 align="center">Local Installation</h3>
+#### Local Installation
 
 Clone the repository and run
 
