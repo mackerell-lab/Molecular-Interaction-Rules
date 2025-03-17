@@ -134,13 +134,7 @@ molecules = MoleculerDatabase()
 methylacetamide_acetone_dimer = molecules.form_dimer_coordinates('methylacetamide', 'H1', 'acetone', 'O1')
 
 print (methylacetamide_acetone_dimer)
-
 ```
-
-Output
-```
-```
-
 
 <h2 align="center">Moleculer Database</h2>
 
