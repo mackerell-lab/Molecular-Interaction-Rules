@@ -75,20 +75,20 @@ print (mol1_zmat_for_site_of_interest)
 
 #### Get Dimer Z-Matrix for Desired Interaction Type 
 
-##### Interaction Type 1
+##### Interaction Type 1 (pi-stacking)
 
 ```python
-# Get Benzene-Dimer Z-Matrix for Pi Stacking
+# Get Benzene-Dimer Z-Matrix for pi- stacking
 mol2 = 'benzene'
 mol2_site_of_interest = 'RC1'
 benzene_dimer_pistack = molecules.form_dimer_coordinates(mol1, mol1_site_of_interest, mol2, mol2_site_of_interest)
 print (benzene_dimer_pistack)
 ```
 
-##### Interaction Type 1
+##### Interaction Type 2 (C-H--pi interaction; T-shaped)
 
 ```python
-# Get Benzene-Dimer Z-Matrix for C-H--Pi interaction mode
+# Get Benzene-Dimer Z-Matrix for C-H--pi interaction mode
 mol2 = 'benzene'
 mol2_site_of_interest = 'H1'
 benzene_dimer_chpi = molecules.form_dimer_coordinates(mol1, mol1_site_of_interest, mol2, mol2_site_of_interest)
