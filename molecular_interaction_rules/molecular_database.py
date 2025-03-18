@@ -333,6 +333,22 @@ class MoleculerDatabase(object):
            
         return molecule_names
 
+    def get_molecule_fg_family(self, molecule_name):
+        '''
+        Get the Molecule Monomer Interactions
+        '''
+
+        for molecule in self.master_list:
+
+            name = str(molecule.__name__).lower()
+
+            if name == molecule_name:
+
+                molecule = molecule()
+                fg_family = molecule.__module__.split('.')[-2]
+
+                return fg_family
+         
     def get_molecule_interactions(self, molecule_name):
 
        '''
@@ -346,28 +362,12 @@ class MoleculerDatabase(object):
 
          name = str(molecule.__name__).lower()
 
-         if name == monomer:
+         if name == molecule_name:
             molecule = molecule()
             interactions = [method for method in dir(instance) if callable(getattr(instance, method))]
 
        return interactions
        
-    def get_molecule_fg_family(self, molecule_name):
-        '''
-        Get the Molecule Monomer Interactions
-        '''
-
-        for molecule in self.master_list:
-
-            name = str(molecule.__name__).lower()
-
-            if name == monomer:
-
-                molecule = molecule()
-                fg_family = molecule.__module__.split('.')[-2]
-
-            return fg_family
-         
     def get_monomer_coordinates(
       self,
       monomer,
