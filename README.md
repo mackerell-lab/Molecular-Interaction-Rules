@@ -25,34 +25,35 @@ Clone the repository and run
 python -m pip install -e .
 ```
 
-#### Get Molecules Full List in Current Database
 
 
 ```python
 from molecular_interaction_rules import MoleculerDatabase
 
 molecules = MoleculerDatabase()
+```
+
+#### Get Full List of Molecules in Current Database
+
+```python
+# Get Full List of Molecules in Current Database
 all_molecules = molecules.get_molecule_list()
 print (all_molecules)
 ```
 
-#### Get Functional Group Family 
+#### Get Functional Group Family of Desired Molecule
 
 ```python
-benzene_fg_family = molecules.get_molecule_fg_family('benzene')
-```
-
-#### Get Molecule Interactions
-
-```python
-benzene_interactions = molecules.get_molecule_fg_family('benzene')
-print (benzene_interactions)
+# Get Functional Group Family of Desired Molecule
+mol1= "benzene"
+mol1_fg_family = molecules.get_molecule_fg_family(mol1)
+print(mol1_fg_family)
 ```
 
 #### Get Site Names in a Molecule for Interaction with Another Molecule
 
 ```python
-mol1= "benzene"
+# Get Site Names in a Molecule for Interaction with Another Molecule
 mol1_atom_names = molecules.get_atom_names(mol1)
 print(mol1_atom_names)
 ```
@@ -63,85 +64,36 @@ Output:
 ['RC1', 'H1']
 ```
 
-#### Get Monomer Z-Matrix for Site RC1
+#### Get Monomer Z-Matrix for Site of Interest
 
 ```python
+# Get Monomer Z-Matrix for Site RC1
 mol1_site_of_interest = "RC1"
 mol1_zmat_for_site_of_interest = molecules.get_monomer_coordinates(mol1, mol1_site_of_interest)
 print (mol1_zmat_for_site_of_interest)
 ```
 
-Output:
+#### Get Dimer Z-Matrix for Desired Interaction Type 
 
-```
-X11
-C11  X11  1.3940
-C12  C11  1.3774 X11   60.0000
-C13  C12  1.3774 C11  120.0000 X11    0.0000
-C14  C13  1.3774 C12  120.0000 C11    0.0000
-C15  C14  1.3774 C13  120.0000 C12    0.0000
-C16  C15  1.3774 C14  120.0000 C13    0.0000
-H11  C11  1.0756 C12  120.0000 C13  180.0000
-H12  C12  1.0756 C11  120.0000 C13  180.0000
-H13  C13  1.0756 C12  120.0000 C11  180.0000
-H14  C14  1.0756 C13  120.0000 C12  180.0000
-H15  C15  1.0756 C14  120.0000 C13  180.0000
-H16  C16  1.0756 C15  120.0000 C11  180.0000
-0 1
-
-```
-
-#### Get Benzene-Dimer Z-Matrix for Pi Stacking
+##### Interaction Type 1
 
 ```python
+# Get Benzene-Dimer Z-Matrix for Pi Stacking
 mol2 = 'benzene'
 mol2_site_of_interest = 'RC1'
 benzene_dimer_pistack = molecules.form_dimer_coordinates(mol1, mol1_site_of_interest, mol2, mol2_site_of_interest)
 print (benzene_dimer_pistack)
 ```
 
-Output
-```
-X11
-C11  X11  1.3940
-C12  C11  1.3774 X11   60.0000
-C13  C12  1.3774 C11  120.0000 X11    0.0000
-C14  C13  1.3774 C12  120.0000 C11    0.0000
-C15  C14  1.3774 C13  120.0000 C12    0.0000
-C16  C15  1.3774 C14  120.0000 C13    0.0000
-H11  C11  1.0756 C12  120.0000 C13  180.0000
-H12  C12  1.0756 C11  120.0000 C13  180.0000
-H13  C13  1.0756 C12  120.0000 C11  180.0000
-H14  C14  1.0756 C13  120.0000 C12  180.0000
-H15  C15  1.0756 C14  120.0000 C13  180.0000
-H16  C16  1.0756 C15  120.0000 C11  180.0000
-0 1
---
-X21   X11  DISTANCE  C11   ANGLE  C12   DIHEDRAL
-C21  X21  1.3940  X11   90.0000  C11  180.0000
-C22  C21  1.3774 X21   60.0000  X11   90.0000
-C23  C22  1.3774 C21  120.0000 X21    0.0000
-C24  C23  1.3774 C22  120.0000 C21    0.0000
-C25  C24  1.3774 C23  120.0000 C22    0.0000
-C26  C25  1.3774 C24  120.0000 C23    0.0000
-H21  C21  1.0756 C22  120.0000 C23  180.0000
-H22  C22  1.0756 C21  120.0000 C23  180.0000
-H23  C23  1.0756 C22  120.0000 C21  180.0000
-H24  C24  1.0756 C23  120.0000 C22  180.0000
-H25  C25  1.0756 C24  120.0000 C23  180.0000
-H26  C26  1.0756 C25  120.0000 C21  180.0000
-0 1
-```
-
-#### Get Benzene-Dimer Z-Matrix for C-H--Pi interaction mode 
+##### Interaction Type 1
 
 ```python
+# Get Benzene-Dimer Z-Matrix for C-H--Pi interaction mode
 mol2 = 'benzene'
 mol2_site_of_interest = 'H1'
-benzene_dimer_ch-pi = molecules.form_dimer_coordinates(mol1, mol1_site_of_interest, mol2, mol2_site_of_interest)
-print (benzene_dimer_ch-pi)
+benzene_dimer_chpi = molecules.form_dimer_coordinates(mol1, mol1_site_of_interest, mol2, mol2_site_of_interest)
+print (benzene_dimer_chpi)
 ```
-
 
 <h2 align="center">Moleculer Database</h2>
 
