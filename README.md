@@ -25,18 +25,36 @@ Clone the repository and run
 python -m pip install -e .
 ```
 
+#### Get Molecules Full List in Current Database
 
-#### Get Atom Names
 
 ```python
-
 from molecular_interaction_rules import MoleculerDatabase
 
 molecules = MoleculerDatabase()
-benzene_atom_names = molecules.get_atom_names('benzene')
+all_molecules = molecules.get_molecule_list()
+print (all_molecules)
+```
 
-print(benzene_atom_names)
+#### Get Functional Group Family 
 
+```python
+benzene_fg_family = molecules.get_molecule_fg_family('benzene')
+```
+
+#### Get Molecule Interactions
+
+```python
+benzene_interactions = molecules.get_molecule_fg_family('benzene')
+print (benzene_interactions)
+```
+
+#### Get Site Names in a Molecule for Interaction with Another Molecule
+
+```python
+mol1= "benzene"
+mol1_atom_names = molecules.get_atom_names(mol1)
+print(mol1_atom_names)
 ```
 
 Output:
@@ -45,17 +63,12 @@ Output:
 ['RC1', 'H1']
 ```
 
-#### Get Monomer Z-Matrix
+#### Get Monomer Z-Matrix for Site RC1
 
 ```python
-
-from molecular_interaction_rules import MoleculerDatabase
-
-molecules = MoleculerDatabase()
-benzene_monomer = molecules.get_monomer_coordinates('benzene', 'RC1')
-
-print (benzene_monomer)
-
+mol1_site_of_interest = "RC1"
+mol1_zmat_for_site_of_interest = molecules.get_monomer_coordinates(mol1, mol1_site_of_interest)
+print (mol1_zmat_for_site_of_interest)
 ```
 
 Output:
@@ -78,17 +91,13 @@ H16  C16  1.0756 C15  120.0000 C11  180.0000
 
 ```
 
-#### Get Dimer Z-Matrix - Benzene T-Shape
+#### Get Benzene-Dimer Z-Matrix for Pi Stacking
 
 ```python
-
-from molecular_interaction_rules import MoleculerDatabase
-
-molecules = MoleculerDatabase()
-benzene_dimer = molecules.form_dimer_coordinates('benzene', 'RC1', 'benzene', 'RC1')
-
-print (benzene_dimer)
-
+mol2 = 'benzene'
+mol2_site_of_interest = 'RC1'
+benzene_dimer_pistack = molecules.form_dimer_coordinates(mol1, mol1_site_of_interest, mol2, mol2_site_of_interest)
+print (benzene_dimer_pistack)
 ```
 
 Output
@@ -124,51 +133,15 @@ H26  C26  1.0756 C25  120.0000 C21  180.0000
 0 1
 ```
 
-#### Get Functional Group Family 
+#### Get Benzene-Dimer Z-Matrix for C-H--Pi interaction mode 
 
 ```python
-
-from molecular_interaction_rules import MoleculerDatabase
-
-molecules = MoleculerDatabase()
-benzene_fg_family = molecules.get_molecule_fg_family('benzene')
-
+mol2 = 'benzene'
+mol2_site_of_interest = 'H1'
+benzene_dimer_ch-pi = molecules.form_dimer_coordinates(mol1, mol1_site_of_interest, mol2, mol2_site_of_interest)
+print (benzene_dimer_ch-pi)
 ```
 
-#### Get Molecule Interactions
-
-```python
-
-from molecular_interaction_rules import MoleculerDatabase
-
-molecules = MoleculerDatabase()
-benzene_interactions = molecules.get_molecule_fg_family('benzene')
-
-print (benzene_interactions)
-```
-
-#### Get Molecules Full List
-
-from molecular_interaction_rules import MoleculerDatabase
-
-```python
-molecules = MoleculerDatabase()
-all_molecules = molecules.get_molecule_list()
-
-print (all_molecules)
-```
-
-#### Get Dimer Z-Matrix - Methylacetamide - Acetone
-
-```python
-
-from molecular_interaction_rules import MoleculerDatabase
-
-molecules = MoleculerDatabase()
-methylacetamide_acetone_dimer = molecules.form_dimer_coordinates('methylacetamide', 'H1', 'acetone', 'O1')
-
-print (methylacetamide_acetone_dimer)
-```
 
 <h2 align="center">Moleculer Database</h2>
 
@@ -195,4 +168,3 @@ Lead Developer: Suliman Sharif
 Co-Authors: Anmol Kumar, Alexander D. MacKerell Jr.
 
 © Copyright 2024 – University of Maryland School of Pharmacy, Computer-Aided Drug Design Center All Rights Reserved
-
