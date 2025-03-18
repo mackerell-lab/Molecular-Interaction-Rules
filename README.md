@@ -124,6 +124,40 @@ H26  C26  1.0756 C25  120.0000 C21  180.0000
 0 1
 ```
 
+#### Get Functional Group Family 
+
+```python
+
+from molecular_interaction_rules import MoleculerDatabase
+
+molecules = MoleculerDatabase()
+benzene_fg_family = molecules.get_molecule_fg_family('benzene')
+
+```
+
+#### Get Molecule Interactions
+
+```python
+
+from molecular_interaction_rules import MoleculerDatabase
+
+molecules = MoleculerDatabase()
+benzene_interactions = molecules.get_molecule_fg_family('benzene')
+
+print (benzene_interactions)
+```
+
+#### Get Molecules Full List
+
+from molecular_interaction_rules import MoleculerDatabase
+
+```python
+molecules = MoleculerDatabase()
+all_molecules = molecules.get_molecule_list()
+
+print (all_molecules)
+```
+
 #### Get Dimer Z-Matrix - Methylacetamide - Acetone
 
 ```python
