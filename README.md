@@ -25,7 +25,7 @@ Clone the repository and run
 python -m pip install -e .
 ```
 
-
+#### Import MoleculerDatabase
 
 ```python
 from molecular_interaction_rules import MoleculerDatabase
