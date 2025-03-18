@@ -353,23 +353,20 @@ class MoleculerDatabase(object):
        return interactions
        
     def get_molecule_fg_family(self, molecule_name):
+        '''
+        Get the Molecule Monomer Interactions
+        '''
 
-       '''
-       
-       Get the Molecule Monomer Interactions
-       
-       '''
+        for molecule in self.master_list:
 
-      for molecule in self.master_list:
+            name = str(molecule.__name__).lower()
 
-        name = str(molecule.__name__).lower()
+            if name == monomer:
 
-        if name == monomer:
+                molecule = molecule()
+                fg_family = molecule.__module__.split('.')[-2]
 
-            molecule = molecule()
-            fg_family = molecule.__module__.split('.')[-2]
-
-        return fg_family
+            return fg_family
          
     def get_monomer_coordinates(
       self,
