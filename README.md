@@ -49,7 +49,7 @@ print (all_molecules)
 
 molecule_a= "benzene"
 molecule_a_fg_family = molecules.get_molecule_fg_family(molecule_a)
-print(mol1_fg_family)
+print(molecule_a_fg_family)
 
 ```
 
@@ -57,8 +57,9 @@ print(mol1_fg_family)
 
 ```python
 
+molecule_a= "benzene"
 molecule_a_atom_names = molecules.get_atom_names(molecule_a)
-print(mol1_atom_names)
+print(molecule_a_atom_names)
 
 ```
 
