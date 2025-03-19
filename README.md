@@ -58,8 +58,8 @@ print(molecule_a_fg_family)
 ```python
 
 molecule_a= "benzene"
-molecule_a_atom_names = molecules.get_atom_names(molecule_a)
-print(molecule_a_atom_names)
+molecule_a_site_names = molecules.get_atom_names(molecule_a)
+print(molecule_a_site_names)
 
 ```
 
@@ -74,8 +74,8 @@ Output:
 ```python
 
 molecule_a_interaction_site = "RC1"
-molecule_a_zmatrix = molecules.get_monomer_coordinates(molecule_a, molecule_a_interaction_site)
-print (molecule_a_zmatrix)
+molecule_a_zmatrix_for_siteRC1 = molecules.get_monomer_coordinates(molecule_a, molecule_a_interaction_site)
+print (molecule_a_zmatrix_for_siteRC1)
 
 ```
 
