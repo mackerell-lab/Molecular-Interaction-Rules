@@ -28,9 +28,10 @@ python -m pip install -e .
 #### Import MoleculerDatabase
 
 ```python
-from molecular_interaction_rules import MoleculerDatabase
 
+from molecular_interaction_rules import MoleculerDatabase
 molecules = MoleculerDatabase()
+
 ```
 
 #### Get Full List of Molecules in Current Database
