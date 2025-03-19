@@ -36,26 +36,29 @@ molecules = MoleculerDatabase()
 #### Get Full List of Molecules in Current Database
 
 ```python
-# Get Full List of Molecules in Current Database
+
 all_molecules = molecules.get_molecule_list()
 print (all_molecules)
+
 ```
 
 #### Get Functional Group Family of Desired Molecule
 
 ```python
-# Get Functional Group Family of Desired Molecule
-mol1= "benzene"
-mol1_fg_family = molecules.get_molecule_fg_family(mol1)
+
+molecule_a= "benzene"
+molecule_a_fg_family = molecules.get_molecule_fg_family(molecule_a)
 print(mol1_fg_family)
+
 ```
 
 #### Get Site Names in a Molecule for Interaction with Another Molecule
 
 ```python
-# Get Site Names in a Molecule for Interaction with Another Molecule
-mol1_atom_names = molecules.get_atom_names(mol1)
+
+molecule_a_atom_names = molecules.get_atom_names(molecule_a)
 print(mol1_atom_names)
+
 ```
 
 Output:
@@ -67,10 +70,11 @@ Output:
 #### Get Monomer Z-Matrix for Site of Interest
 
 ```python
-# Get Monomer Z-Matrix for Site RC1
-mol1_site_of_interest = "RC1"
-mol1_zmat_for_site_of_interest = molecules.get_monomer_coordinates(mol1, mol1_site_of_interest)
-print (mol1_zmat_for_site_of_interest)
+
+molecule_a_interaction_site = "RC1"
+molecule_a_zmatrix = molecules.get_monomer_coordinates(molecule_a, molecule_a_interaction_site)
+print (molecule_a_zmatrix)
+
 ```
 
 #### Get Dimer Z-Matrix for Desired Interaction Type 
@@ -78,21 +82,23 @@ print (mol1_zmat_for_site_of_interest)
 ##### Interaction Type 1 (pi-stacking)
 
 ```python
-# Get Benzene-Dimer Z-Matrix for pi- stacking
-mol2 = 'benzene'
-mol2_site_of_interest = 'RC1'
-benzene_dimer_pistack = molecules.form_dimer_coordinates(mol1, mol1_site_of_interest, mol2, mol2_site_of_interest)
-print (benzene_dimer_pistack)
+
+molecule_b = 'benzene'
+molecule_b_interaction_site = 'RC1'
+benzene_dimer_pi_stack = molecules.form_dimer_coordinates(molecule_a, molecule_a_interaction_site, molecule_b, molecule_b_interaction_site)
+print (benzene_dimer_pi_stack)
+
 ```
 
-##### Interaction Type 2 (C-H--pi interaction; T-shaped)
+##### Interaction Type 2 (T-shaped)
 
 ```python
-# Get Benzene-Dimer Z-Matrix for C-H--pi interaction mode
-mol2 = 'benzene'
-mol2_site_of_interest = 'H1'
-benzene_dimer_chpi = molecules.form_dimer_coordinates(mol1, mol1_site_of_interest, mol2, mol2_site_of_interest)
-print (benzene_dimer_chpi)
+
+molecule_b = 'benzene'
+molecule_b_interaction_site = 'H1'
+benzene_dimer_t_shaped = molecules.form_dimer_coordinates(molecule_a, molecule_a_interaction_site, molecule_b, molecule_b_interaction_site)
+print (benzene_dimer_t_shaped)
+
 ```
 
 <h2 align="center">Moleculer Database</h2>
