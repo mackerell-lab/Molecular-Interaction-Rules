@@ -113,7 +113,6 @@ from molecular_interaction_rules.molecules.non_aromatic.organophosphorous.methyl
 
 ## Organosulfur
 
-from molecular_interaction_rules.molecules.non_aromatic.organosulfur.dithiolane import Dithiolane
 from molecular_interaction_rules.molecules.non_aromatic.organosulfur.dimethyl_sulfone import DimethylSulfone
 from molecular_interaction_rules.molecules.non_aromatic.organosulfur.dimethyl_sulfoxide import DimethylSulfoxide
 from molecular_interaction_rules.molecules.non_aromatic.organosulfur.dimethyl_trithiocarbonate import DimethylTrithiocarbonate
