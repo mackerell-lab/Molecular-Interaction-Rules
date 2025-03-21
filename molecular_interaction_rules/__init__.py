@@ -105,7 +105,6 @@ from molecular_interaction_rules.molecules.non_aromatic.organosulfur.dimethyldis
 from molecular_interaction_rules.molecules.non_aromatic.organosulfur.ethylsulfanyl_phosphonic_acid import EthylSulfanylPhosphonicAcid
 from molecular_interaction_rules.molecules.non_aromatic.organosulfur.methanethiol import MethaneThiol
 from molecular_interaction_rules.molecules.non_aromatic.organosulfur.methylthiolate import MethylThiolate
-from molecular_interaction_rules.molecules.non_aromatic.organosulfur.dithiolane import Dithiolane
 
 # Aromatics
 
