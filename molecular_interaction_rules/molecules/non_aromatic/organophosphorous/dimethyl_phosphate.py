@@ -56,7 +56,7 @@ class DimethylPhosphate(object):
         '''
 
         atom_name = [
-            'O3', 'P1', 'O4', ''
+            'P1', 'O2', 'O3', 'H3', 'O1', 'C1', 'H11', 'H12', 'H13', 'O4', 'H2'
         ]
 
         return textwrap.dedent(zmatrix), atom_name
@@ -86,7 +86,6 @@ class DimethylPhosphate(object):
             O24  P21  1.6311  O22  102.5485  H21 -148.9298
             C21  O23  1.4551  P21  115.2049  O21  -50.3827
             C22  O24  1.4542  P21  115.4507  O21  -44.3740
-            C23  O24  1.4542  P21  115.4507  O21  -44.3740
             H22  C21  1.0994  O23  109.8941  P21  -68.8607
             H23  C21  1.0994  O23  109.8941  P21   53.1472
             H24  C21  1.0994  O23  109.8941  P21  172.3540
@@ -98,7 +97,7 @@ class DimethylPhosphate(object):
           '''
 
         atom_name = [
-          ''
+            'O4', 'P1', 'O2', 'H2', 'O1', 'O3', 'C1', 'C2', 'H11', 'H12', 'H13', 'H21', 'H22', 'H23'
         ]
 
         return textwrap.dedent(zmatrix), atom_name
