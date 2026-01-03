@@ -134,7 +134,7 @@ class FluoroBenzene(object):
 
         atom_name = [
            'F6', 'C6', 'C5', 'C4', 'C3', 'C2', 'C1', 'H5', 'H4', 'H3', 'H2', 'H1'
-        ],
+        ]
 
         return textwrap.dedent(zmatrix), atom_name
 
@@ -159,7 +159,7 @@ class FluoroBenzene(object):
 
         atom_name = [
           'C6', 'C5', 'C4', 'C3', 'C2', 'C1',  'F6', 'H5', 'H4', 'H3', 'H2', 'H1'
-        ],
+        ]
 
         return textwrap.dedent(zmatrix), atom_name
 

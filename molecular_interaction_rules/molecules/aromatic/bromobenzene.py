@@ -134,7 +134,7 @@ class BromoBenzene(object):
 
       atom_name = [
         'BR', 'C6', 'C5', 'C4', 'C3', 'C2', 'C1', 'H5', 'H4', 'H3', 'H2', 'H1'
-      ],
+      ]
 
       return textwrap.dedent(zmatrix), atom_name
 

@@ -141,6 +141,6 @@ class Benzene(object):
         atom_name = [
           'CZ', 'CE1', 'CD1', 'CG', 'CD2', 'CE2',
           'HZ', 'HE1', 'HD1', 'HG', 'HD2', 'HE2',
-        ],
+        ]
 
         return textwrap.dedent(zmatrix), atom_name

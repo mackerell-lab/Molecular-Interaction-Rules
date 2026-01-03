@@ -109,7 +109,7 @@ class IodoBenzene(object):
 
       atom_name = [
         'I6', 'C6', 'C5', 'C4', 'C3', 'C2', 'C1', 'H5', 'H4', 'H3', 'H2', 'H1'
-      ],
+      ]
 
       return textwrap.dedent(zmatrix), atom_name
 
