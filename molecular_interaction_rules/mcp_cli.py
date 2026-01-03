@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #
-# Molecular Interation Rules: MCP CLI
-# ------------------------------------
+# Molecular Interaction Rules: MCP CLI
+# -------------------------------------
 
 # Imports
 # -------
