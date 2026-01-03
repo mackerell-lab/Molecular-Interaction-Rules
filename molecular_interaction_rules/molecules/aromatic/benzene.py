@@ -115,14 +115,14 @@ class Benzene(object):
         atom_name = [
            'HZ', 'CZ', 'CE1', 'CD1', 'CG', 'CD2', 'CE2',
            'HE1', 'HD1', 'HG', 'HD2', 'HE2',
-        ],
+        ]
 
         return textwrap.dedent(zmatrix), atom_name
 
     def monomer_b_aromatic_zmatrix(self):
 
         zmatrix = '''\
-            X21  H11  DISTANCE  :2   ANGLE  :3   90.0000
+            X21  :1  DISTANCE  :2   ANGLE  :3   90.0000
             C21  X21  1.3940  :1   90.0000  :2  180.0000
             C22  C21  1.3774 X21   60.0000  :1   90.0000
             C23  C22  1.3774 C21  120.0000 X21  DIHEDRAL
@@ -141,6 +141,6 @@ class Benzene(object):
         atom_name = [
           'CZ', 'CE1', 'CD1', 'CG', 'CD2', 'CE2',
           'HZ', 'HE1', 'HD1', 'HG', 'HD2', 'HE2',
-        ],
+        ]
 
         return textwrap.dedent(zmatrix), atom_name

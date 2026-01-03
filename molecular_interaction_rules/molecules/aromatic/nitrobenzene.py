@@ -87,7 +87,7 @@ class Nitrobenzene(object):
 
         atom_name = [
            'O6A', 'N6', 'C6', 'C5', 'O6B', 'C4', 'C3', 'C2', 'C1', 'H5', 'H4', 'H3', 'H2', 'H1'
-        ],
+        ]
 
         return textwrap.dedent(zmatrix), atom_name
 

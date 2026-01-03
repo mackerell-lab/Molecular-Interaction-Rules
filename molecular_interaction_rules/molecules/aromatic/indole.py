@@ -116,7 +116,7 @@ class Indole(object):
         atom_name = [
           'NE1', 'CE2', 'CZ2', 'CH2', 'CZ3', 'CE3', 'CD2', 'CG', 'CD1',
           'HE1', 'HZ2', 'HH2', 'HZ3', 'HE3', 'HG', 'HD1'
-        ],
+        ]
 
         return textwrap.dedent(zmatrix), atom_name
 

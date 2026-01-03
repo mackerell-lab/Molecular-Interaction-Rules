@@ -99,7 +99,7 @@ class Furan(object):
 
         atom_name = [
             'O5', 'C1', 'C4', 'C3', 'C2', 'H2', 'H3', 'H1', 'H4'
-        ],
+        ]
 
         return textwrap.dedent(zmatrix), atom_name
 

@@ -161,7 +161,7 @@ class Azulene(object):
 
         atom_name = [
           'C7', 'C6', 'C5', 'C4', 'C3', 'C2', 'H3', 'C1', 'C10', 'C9', 'C8', 'H2', 'H1', 'H9', 'H8', 'H7', 'H6', 'H5'
-        ],
+        ]
 
         return textwrap.dedent(zmatrix), atom_name
 

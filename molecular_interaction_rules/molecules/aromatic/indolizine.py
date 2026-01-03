@@ -125,7 +125,7 @@ class Indolizine(object):
         '''
 
         atom_name = [
-        ],
+        ]
 
         return textwrap.dedent(zmatrix), atom_name
 
