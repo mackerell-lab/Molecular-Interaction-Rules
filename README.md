@@ -25,6 +25,29 @@ Clone the repository and run
 python -m pip install -e .
 ```
 
+#### Model Context Protocol (MCP) Support
+
+This package includes MCP server support for AI assistants. See [MCP_README.md](MCP_README.md) for detailed MCP usage instructions.
+
+**Quick Start:**
+
+```bash
+# Run the MCP server
+molecular-interaction-rules-mcp
+```
+
+Add to your MCP configuration:
+
+```json
+{
+  "mcpServers": {
+    "molecular-interaction-rules": {
+      "command": "molecular-interaction-rules-mcp"
+    }
+  }
+}
+```
+
 #### Import MoleculerDatabase
 
 ```python

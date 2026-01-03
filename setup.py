@@ -35,6 +35,11 @@ setup(
     long_description_content_type='text/markdown',
     zip_safe=False,
     keywords='molcules non-covalent interactions rules geometry',
+    entry_points={
+        'console_scripts': [
+            'molecular-interaction-rules-mcp=molecular_interaction_rules.mcp_cli:main',
+        ],
+    },
     classifiers=[
         'Development Status :: 4 - Beta',
         'Natural Language :: English',
