@@ -105,7 +105,6 @@ from molecular_interaction_rules.molecules.non_aromatic.organosulfur.dimethyldis
 from molecular_interaction_rules.molecules.non_aromatic.organosulfur.ethylsulfanyl_phosphonic_acid import EthylSulfanylPhosphonicAcid
 from molecular_interaction_rules.molecules.non_aromatic.organosulfur.methanethiol import MethaneThiol
 from molecular_interaction_rules.molecules.non_aromatic.organosulfur.methylthiolate import MethylThiolate
-from molecular_interaction_rules.molecules.non_aromatic.organosulfur.dithiolane import Dithiolane
 
 # Aromatics
 
@@ -138,5 +137,6 @@ from molecular_interaction_rules.molecules.aromatic.two_h_pyran import TwoHPyran
 from molecular_interaction_rules.molecules.aromatic.uracil import Uracil
 
 from molecular_interaction_rules.molecular_database import MoleculerDatabase
+from molecular_interaction_rules.mcp_server import MCPServer
 
-__all__ = ['MoleculerDatabase']
+__all__ = ['MoleculerDatabase', 'MCPServer']

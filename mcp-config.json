@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "molecular-interaction-rules": {
+      "command": "molecular-interaction-rules-mcp",
+      "description": "Molecular Interaction Rules Database - Access quantum mechanically optimized molecular geometries and generate monomer/dimer z-matrices for non-covalent interactions"
+    }
+  }
+}
